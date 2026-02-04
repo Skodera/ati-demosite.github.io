@@ -7,10 +7,13 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - Data_overview.qmd
-      - Time_series.qmd
-      - Data_repository.qmd
+        text: Overview
+      - href: Data_overview.qmd
+        text: Data Dashboard
+      - href: Time_series.qmd
+        text: Time series
+      - href: Data_repository.qmd
+        text: Repository
 
 format:
   html:
