@@ -1,0 +1,15 @@
+{
+  "hash": "5777f4bd76a80ab860c5b59bff7292d9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"test_ATI_website\"\n---\n\n\n::: {.cell}\n\n```{.r .cell-code}\nknitr::include_graphics(\"~/Documents/ATI_website/Data/test_map.png\")\n```\n\n::: {.cell-output-display}\n![](../Data/test_map.png){width=1500}\n:::\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

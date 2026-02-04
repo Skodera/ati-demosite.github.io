@@ -1,0 +1,7 @@
+---
+title: "test_ATI_website"
+---
+
+```{r}
+knitr::include_graphics("~/Documents/ATI_website/Data/test_map.png")
+```
