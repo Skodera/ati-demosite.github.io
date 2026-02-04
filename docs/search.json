@@ -1,16 +1,9 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "test_ATI_website",
+    "title": "Around The Island of Moorea",
     "section": "",
-    "text": "knitr::include_graphics(\"~/Documents/ATI_website/Data/test_map.png\")"
+    "text": "Here I will add a description of the Around the Island project"
   }
 ]

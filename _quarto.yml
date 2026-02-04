@@ -3,12 +3,14 @@ project:
   output-dir: docs
 
 website:
-  title: "test_ATI_website"
+  title: "Around The Island of Moorea"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - Data_overview.qmd
+      - Time_series.qmd
+      - Data_repository.qmd
 
 format:
   html:
