@@ -19,3 +19,9 @@ about:
       text: Conservation Metrics
       href: https://conservationmetrics.com/
 ---
+
+![](images/PIs.jpg)
+
+::: {style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;"}
+<img src="images/CG_logo.png" alt="CG Logo" width="106"/> <img src="images/CM_logo.jpg" alt="CM Logo" width="140"/>
+:::

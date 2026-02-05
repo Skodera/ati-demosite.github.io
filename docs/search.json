@@ -11,6 +11,13 @@
     "href": "index.html",
     "title": "Around The Island of Moorea",
     "section": "",
-    "text": "Here I will add a description of the Around the Island project\nAlso include a fly-through video of Moorea here?"
+    "text": "Also include a fly-through video of Moorea here?\nHere I will add a description of the Around the Island project"
+  },
+  {
+    "objectID": "Data_repository.html",
+    "href": "Data_repository.html",
+    "title": "Data_repository",
+    "section": "",
+    "text": "Here I will add a description and the links to the raw data.\n\neDNA sequencing data\nNutrient data\nFish count data\nAcoustic data\nBenthic data\nLand use and watershed data"
   }
 ]

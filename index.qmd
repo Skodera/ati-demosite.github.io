@@ -1,10 +1,13 @@
 ---
 title: "Around The Island of Moorea"
-about:
-  template: marquee
-  image: images/Moorea.jpg
 ---
 
-Here I will add a description of the Around the Island project
+::: {style="width: 100%; margin: 0; padding: 0; position: relative; background: #000; overflow: hidden;"}
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/5aHcUyrHpEQ?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=5aHcUyrHpEQ&amp;controls=0&amp;showinfo=0&amp;rel=0" style="display: block; border: none; pointer-events: auto;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
+:::
 
 Also include a fly-through video of Moorea here?
+
+Here I will add a description of the Around the Island project
