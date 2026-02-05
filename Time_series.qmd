@@ -4,30 +4,14 @@ format: html
 ---
 
 ```{r}
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 14
-#| fig-height: 10
-#| out-width: "100%"
-#| fig-align: center
-library(leaflet)
 
-# Read in your site metadata
-sites <- read.csv("data/sites_metadata.csv")
-circles = data.frame(lng = sites$Longitude, lat = sites$Latitude,
-                     values = sites$Habitat)
-pal <- colorFactor("viridis", levels = circles$values)
-
-leaflet() %>%
-  addProviderTiles("Esri.WorldImagery") %>%  # Satellite imagery
-  setView(lng = -149.84, lat = -17.5392, zoom = 11) %>%
-  addCircleMarkers(data = circles, color = ~pal(values), 
-                   radius = 3, opacity = 1, fillOpacity = 0.8) %>%
-  addLegend(data = circles,
-            position = "bottomright",
-            pal = pal, values = ~values,
-            title = "Legend",
-            opacity = 1)
 
 ```
+
+Here I will add:
+
+-   A animated gif of photoquads at LTER sites through time.
+
+-   a time-series plot displaying changes in coral and algal cover through time.
+
+-   Acoustic data

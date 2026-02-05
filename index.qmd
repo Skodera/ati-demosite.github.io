@@ -1,24 +1,8 @@
 ---
 title: "Around The Island of Moorea"
 about:
-  template: jolla
+  template: marquee
   image: images/Moorea.jpg
-  links: 
-    - icon: link
-      text: Vega-Thurber lab
-      href: https://vegathurberlabucsb.wixsite.com/microbiology
-    - icon: link
-      text: Burkepile lab
-      href: https://labs.eemb.ucsb.edu/burkepile/deron/
-    - icon: link
-      text: Speare lab
-      href: http://www.kellyspeare.com/
-    - icon: link
-      text: McDevitt-Irwin lab
-      href: https://www.jamiemcdevittirwin.com/
-    - icon: link
-      text: Conservation Metrics
-      href: https://conservationmetrics.com/
 ---
 
 Here I will add a description of the Around the Island project
