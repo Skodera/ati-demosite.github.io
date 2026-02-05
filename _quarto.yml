@@ -7,7 +7,8 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Overview
+        text: Home
+      - sidebar:dashboard
       - href: Data_overview.qmd
         text: Data Dashboard
       - href: Time_series.qmd
@@ -16,6 +17,17 @@ website:
         text: Repository
       - href: Team.qmd
         text: Team
+    
+  sidebar:
+    - id: dashboard
+      title: "Data Dashboard 2"
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents:
+          - dashboard/Habitat_type.qmd
+          - dashboard/Distance_from_shore.qmd
+      
 
 format:
   html:
@@ -26,4 +38,3 @@ format:
     toc: true
 
 editor: visual
-

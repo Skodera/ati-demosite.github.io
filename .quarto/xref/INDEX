@@ -16,5 +16,11 @@
   },
   "Team.qmd": {
     "Team.html": "7661ad00"
+  },
+  "dashboard/Distance_from_shore.qmd": {
+    "Distance_from_shore.html": "ecd907e3"
+  },
+  "dashboard/Habitat_type.qmd": {
+    "Habitat_type.html": "77281756"
   }
 }
