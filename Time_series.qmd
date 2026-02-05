@@ -1,5 +1,5 @@
 ---
-title: Habitat type
+title: "Time_series"
 format: html
 ---
 
@@ -12,12 +12,11 @@ format: html
 library(leaflet)
 
 # Read in your site metadata
-sites <- read.csv("~/Documents/ATI_website/Data/sites_metadata.csv")
+sites <- read.csv("data/sites_metadata.csv")
 circles = data.frame(lng = sites$Longitude, lat = sites$Latitude)
 
 leaflet() %>%
   addProviderTiles("Esri.WorldImagery") %>%  # Satellite imagery
   setView(lng = -149.84, lat = -17.5392, zoom = 11) %>%
-  addCircles(data = circles, color = "red")
-
+  addCircles(lng = circles$lng, lat = circles$lat, color = "red", weight = 5, opacity = 0.5, fillOpacity = 0.2)
 ```
