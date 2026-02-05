@@ -13,16 +13,21 @@ format: html
 #| fig-align: center
 library(leaflet)
 
+# Read in your site metadata
 sites <- read.csv("~/Documents/ATI_website/Data/sites_metadata.csv")
 circles = data.frame(lng = sites$Longitude, lat = sites$Latitude,
                      values = sites$Habitat)
 pal <- colorFactor("viridis", levels = circles$values)
 
+metadata = paste0("Site ",sites$Site, "<hr>", sites$Habitat)
+
+
 leaflet() %>%
   addProviderTiles("Esri.WorldImagery") %>%  # Satellite imagery
   setView(lng = -149.84, lat = -17.5392, zoom = 12) %>%
   addCircleMarkers(data = circles, color = ~pal(values), 
-                   radius = 3, opacity = 1, fillOpacity = 0.8) %>%
+                   radius = 3, opacity = 1, fillOpacity = 0.8,
+                   popup = metadata) %>%
   addLegend(data = circles,
             position = "bottomright",
             pal = pal, values = ~values,

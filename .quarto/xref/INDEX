@@ -22,5 +22,29 @@
   },
   "dashboard/Habitat_type.qmd": {
     "Habitat_type.html": "77281756"
+  },
+  "dashboard/Fish_visual_surveys.qmd": {
+    "Fish_visual_surveys.html": "a7c66981"
+  },
+  "dashboard/Benthic_coral_cover.qmd": {
+    "Benthic_coral_cover.html": "1830fce0"
+  },
+  "dashboard/Benthic_algal_cover.qmd": {
+    "Benthic_algal_cover.html": "b3343bc0"
+  },
+  "dashboard/Turbinaria.qmd": {
+    "Turbinaria.html": "f50b0761"
+  },
+  "dashboard/Bacterial_eDNA.qmd": {
+    "Bacterial_eDNA.html": "bce0d379"
+  },
+  "dashboard/Water_quality_index.qmd": {
+    "Water_quality_index.html": "943ba393"
+  },
+  "dashboard/Fish_eDNA.qmd": {
+    "Fish_eDNA.html": "1e636886"
+  },
+  "dashboard/Bleaching.qmd": {
+    "Bleaching.html": "a7345635"
   }
 }

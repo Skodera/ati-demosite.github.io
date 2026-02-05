@@ -9,8 +9,6 @@ website:
       - href: index.qmd
         text: Home
       - sidebar:dashboard
-      - href: Data_overview.qmd
-        text: Data Dashboard
       - href: Time_series.qmd
         text: Time series
       - href: Data_repository.qmd
@@ -20,13 +18,23 @@ website:
     
   sidebar:
     - id: dashboard
-      title: "Data Dashboard 2"
+      title: "Data Dashboard"
       style: "docked"
       background: light
       collapse-level: 2
       contents:
           - dashboard/Habitat_type.qmd
           - dashboard/Distance_from_shore.qmd
+          - dashboard/Turbinaria.qmd
+          - dashboard/Water_quality_index.qmd
+          - dashboard/Benthic_coral_cover.qmd
+          - dashboard/Benthic_algal_cover.qmd
+          - dashboard/Bleaching.qmd
+          - dashboard/Bacterial_eDNA.qmd
+          - dashboard/Fish_eDNA.qmd
+          - dashboard/Fish_visual_surveys.qmd
+          
+          
       
 
 format:
