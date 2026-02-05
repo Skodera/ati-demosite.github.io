@@ -5,5 +5,12 @@
     "title": "Around The Island of Moorea",
     "section": "",
     "text": "Here I will add a description of the Around the Island project"
+  },
+  {
+    "objectID": "Time_series.html",
+    "href": "Time_series.html",
+    "title": "Time_series",
+    "section": "",
+    "text": "Warning in colorFactor(\"viridis\", levels = circles$values): Duplicate levels\ndetected\n\n\nAssuming \"lng\" and \"lat\" are longitude and latitude, respectively"
   }
 ]
