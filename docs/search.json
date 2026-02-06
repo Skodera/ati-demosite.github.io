@@ -4,7 +4,7 @@
     "href": "Time_series.html",
     "title": "Time series",
     "section": "",
-    "text": "Here I will add:\n\nA animated gif of photoquads at LTER sites through time.\n\n\n\na time-series plot displaying changes in coral and algal cover through time.\nAcoustic data"
+    "text": "Here I will add:\n\nA animated gif of photoquads at LTER sites through time.\n\n\n\na time-series plot displaying changes in coral and algal cover through time.\n\n\n\nAcoustic data"
   },
   {
     "objectID": "index.html",
@@ -18,6 +18,6 @@
     "href": "Data_repository.html",
     "title": "Data_repository",
     "section": "",
-    "text": "Here I will add a description and the links to the raw data.\n\neDNA sequencing data\nNutrient data\nFish count data\nAcoustic data\nBenthic data\nLand use and watershed data"
+    "text": "Here I will add a description and the links to the raw data.\n\nTurbinaria data\nWater quality index data\nBleaching survey data\nBacterial eDNA sequencing data\nFish eDNA sequencing data\nLTER fish visual survey data\nTemperature data\nThermal range data\nAcoustic data\nLTER benthic coral cover data\nLTER benthic algal cover data\nLand use data"
   }
 ]

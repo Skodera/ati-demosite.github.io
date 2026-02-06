@@ -5,14 +5,26 @@ format: html
 
 Here I will add a description and the links to the raw data.
 
--   eDNA sequencing data
+-   [Turbinaria data](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcr.1047.1)
 
--   Nutrient data
+-   Water quality index data
 
--   Fish count data
+-   [Bleaching survey data](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcr.5033.10)
+
+-   [Bacterial eDNA sequencing data](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcr.5033.10)
+
+-   Fish eDNA sequencing data
+
+-   [LTER fish visual survey data](https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-mcr.6.64)
+
+-   [Temperature data](https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-mcr.6.64)
+
+-   [Thermal range data](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcr.1045.6)
 
 -   Acoustic data
 
--   Benthic data
+-   [LTER benthic coral cover data](https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcr&identifier=8)
 
--   Land use and watershed data
+-   [LTER benthic algal cover data](https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcr&identifier=8)
+
+-   [Land use data](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcr.6005.2)

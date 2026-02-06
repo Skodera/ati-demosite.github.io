@@ -12,9 +12,11 @@ Here I will add:
 
 -   A animated gif of photoquads at LTER sites through time.
 
-<img src="images/test_gif.gif" alt="Animated gif of photoquads at LTER sites" style="width: 100%; max-width: 800px; display: block; margin: 0 auto;"/>
+<img src="images/test_gif.gif" alt="Animated gif of photoquads at LTER sites" style="max- display: block; margin: 0 auto;" width="68%"/>
 
 -   a time-series plot displaying changes in coral and algal cover through time.
+
+<img src="images/test_gif2.gif" alt="Time series plot animation" style="max- display: block; margin: 0 auto;" width="69%"/>
 
 -   Acoustic data
 
