@@ -4,7 +4,6 @@ project:
 
 website:
   title: "Around The Island of Moorea"
-
   navbar:
     left:
       - href: index.qmd
@@ -23,6 +22,7 @@ website:
       style: "docked"
       background: light
       collapse-level: 2
+      width: 200  # Add this to make sidebar narrower
       contents:
           - dashboard/Habitat_type.qmd
           - dashboard/Distance_from_shore.qmd

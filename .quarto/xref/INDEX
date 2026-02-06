@@ -46,5 +46,14 @@
   },
   "dashboard/Bleaching.qmd": {
     "Bleaching.html": "a7345635"
+  },
+  "index.fr.qmd": {
+    "index.fr.html": "6920ccf8"
+  },
+  "index.en.qmd": {
+    "index.en.html": "4807b123"
+  },
+  "index.ty.qmd": {
+    "index.ty.html": "a2b32dc8"
   }
 }

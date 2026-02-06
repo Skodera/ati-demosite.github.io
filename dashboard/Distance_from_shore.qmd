@@ -1,13 +1,13 @@
 ---
 title: "Distance from shore"
-format: html
+format: dashboard
 ---
 
 ```{r}
 #| echo: false
 #| warning: false
 #| message: false
-#| fig-width: 14
+#| fig-width: 20
 #| fig-height: 10
 #| out-width: "100%"
 #| fig-align: center
