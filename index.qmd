@@ -2,10 +2,19 @@
 title: "Around The Island of Moorea"
 ---
 
-::: {style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); padding: 0; position: relative; background: #000; overflow: hidden;"}
-<iframe width="100%" height="600" src="https://www.youtube.com/embed/5aHcUyrHpEQ?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=5aHcUyrHpEQ&amp;controls=0&amp;showinfo=0&amp;rel=0" style="display: block; border: none; pointer-events: auto;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+::: {style="max-width: 1200px; margin: 0 auto; padding: 0; position: relative; overflow: hidden; background: #000;"}
+<div style="position: relative; width: 100%; padding-bottom: 56.25%;"> <!-- 16:9 ratio -->
+  <iframe
+    src="https://www.youtube.com/embed/5aHcUyrHpEQ?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=5aHcUyrHpEQ&amp;controls=0&amp;showinfo=0&amp;rel=0"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
 
-</iframe>
+
 :::
 
 Also include a fly-through video of Moorea here?
