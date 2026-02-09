@@ -9,6 +9,8 @@ website:
       - href: index.qmd
         text: Home
       - sidebar:dashboard
+      - href: Data_dashboard_2.qmd
+        text: Data dashboard 2
       - href: Time_series.qmd
         text: Time series
       - href: Data_repository.qmd

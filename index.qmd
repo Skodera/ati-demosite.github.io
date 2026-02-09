@@ -17,6 +17,24 @@ title: "Around The Island of Moorea"
 
 :::
 
+
+::: {.panel-tabset}
+#### English
+
 Also include a fly-through video of Moorea here?
 
-Here I will add a description of the Around the Island project
+Here I will add a description of the Around the Island project.
+
+#### Français
+
+Ajouter aussi une vidéo de survol de Moorea ici ?
+
+Ici, j'ajouterai une description du projet Around the Island.
+
+#### Reo Tahiti
+
+A fa'aōpua atoa i te hoê vitiō tarona i ni'a iho i Moorea i teie nei.
+
+I teie nei, e faaite au i te hoê faahitiraa no te faanahoraa “Around the Island”.
+:::
+
