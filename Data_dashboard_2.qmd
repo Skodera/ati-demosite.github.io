@@ -83,43 +83,5 @@ map %>%
     overlayGroups = all_groups,
     options = layersControlOptions(collapsed = FALSE)
   ) %>%
-  hideGroup(all_groups[-1]) %>%
-  htmlwidgets::onRender(paste0("
-    function(el, x) {
-      var map = this;
-      var allGroups = ", jsonlite::toJSON(all_groups, auto_unbox = TRUE), ";
-      var activeGroup = '", all_groups[1], "';
-      
-      // When a layer is added (checked), hide all other groups
-      map.on('overlayadd', function(e) {
-        if (e.name !== activeGroup) {
-          // Hide the previously active group
-          allGroups.forEach(function(group) {
-            if (group === activeGroup) {
-              map.eachLayer(function(layer) {
-                if (layer.options && layer.options.group === group) {
-                  map.removeLayer(layer);
-                }
-              });
-              // Uncheck the checkbox
-              var control = map._layersControl;
-              if (control && control._container) {
-                var label = Array.from(control._container.querySelectorAll('label')).find(function(l) {
-                  return l.textContent.trim() === group;
-                });
-                if (label) {
-                  var input = label.querySelector('input[type=\"checkbox\"]');
-                  if (input && input.checked) {
-                    input.checked = false;
-                    map.fire('overlayremove', {name: group});
-                  }
-                }
-              }
-            }
-          });
-          activeGroup = e.name;
-        }
-      });
-    }
-  "))
+  hideGroup(all_groups[-1])
 ```
