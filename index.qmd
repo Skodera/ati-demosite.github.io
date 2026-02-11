@@ -1,11 +1,12 @@
 ---
-title: "Around The Island of Moorea"
 ---
 
-::: {style="max-width: 1200px; margin: 0 auto; padding: 0; position: relative; overflow: hidden; background: #000;"}
-<div style="position: relative; width: 100%; padding-bottom: 56.25%;"> <!-- 16:9 ratio -->
+
+
+::: {.video-container style="max-width: 95%; margin: 0 auto; padding: 0; position: relative; overflow: hidden; background: #000;"}
+<div style="position: relative; width: 100%; padding-bottom: 50%;"> <!-- Wider aspect ratio, less height -->
   <iframe
-    src="https://www.youtube.com/embed/5aHcUyrHpEQ?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=5aHcUyrHpEQ&amp;controls=0&amp;showinfo=0&amp;rel=0"
+    src="https://www.youtube.com/embed/SKCj3J13yF8?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=SKCj3J13yF8&amp;controls=0&amp;showinfo=0&amp;rel=0"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
     title="YouTube video player"
     frameborder="0"
@@ -13,10 +14,9 @@ title: "Around The Island of Moorea"
     allowfullscreen>
   </iframe>
 </div>
-
-
 :::
 
+# Around The Island of Moorea
 
 ::: {.panel-tabset}
 #### English
@@ -29,6 +29,6 @@ Ici, j'ajouterai une description du projet Around the Island.
 
 #### Reo Tahiti
 
-I teie nei, e faaite au i te hoê faahitiraa no te faanahoraa “Around the Island”.
+I teie nei, e faaite au i te hoê faahitiraa no te faanahoraa "Around the Island".
 :::
 
