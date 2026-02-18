@@ -18,6 +18,9 @@ about:
     - icon: link
       text: Conservation Metrics
       href: https://conservationmetrics.com/
+    - icon: link
+      text: Coral Gardeners
+      href: https://coralgardeners.org/
 ---
 
 ![](images/PIs.jpg)
