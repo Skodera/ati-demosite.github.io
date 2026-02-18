@@ -1,5 +1,8 @@
 ---
 title: "Team"
+format:
+  html:
+    include-after-body: team-links-new-tab.html
 about:
   template: jolla
   links:

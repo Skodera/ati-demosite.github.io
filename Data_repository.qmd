@@ -1,6 +1,8 @@
 ---
 title: "Data_repository"
-format: html
+format:
+  html:
+    include-after-body: team-links-new-tab.html
 ---
 
 Here I will add a description and the links to the raw data.
