@@ -1,9 +1,9 @@
 ---
 title: "Habitat type"
+sidebar: dashboard
 format: 
   dashboard:
     orientation: columns
-
 ---
 
 ```{r}
@@ -37,5 +37,3 @@ leaflet() %>%
             title = "Legend",
             opacity = 1)
 ```
-
-

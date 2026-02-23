@@ -1,6 +1,9 @@
 ---
 title: "Distance from shore"
-format: dashboard
+sidebar: dashboard
+format:
+  dashboard:
+    orientation: columns
 ---
 
 ```{r}
@@ -32,7 +35,7 @@ leaflet() %>%
   addLegend(data = circles,
             position = "bottomright",
             pal = pal, values = ~values,
-            title = "Legend",
+            title = "Distance from shore",
             opacity = 1)
 
 ```
