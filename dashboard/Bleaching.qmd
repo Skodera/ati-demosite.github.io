@@ -1,4 +1,100 @@
 ---
-title: "Bleaching (unavailable)"
-format: html
+title: "Bleaching"
+format:
+  dashboard:
+    orientation: columns
 ---
+
+## Data Dashboard {.sidebar}
+
+-   [Habitat type](Habitat_type.html)
+-   [Distance from shore](Distance_from_shore.html)
+-   [Turbinaria](Turbinaria.html)
+-   [Water quality index](Water_quality_index.html)
+-   [Benthic coral cover](Benthic_coral_cover.html)
+-   [Benthic algal cover](Benthic_algal_cover.html)
+-   [Bleaching](Bleaching.html)
+-   [Bacterial eDNA](Bacterial_eDNA.html)
+-   [Fish eDNA](Fish_eDNA.html)
+-   [Fish visual surveys](Fish_visual_surveys.html)
+
+## Map
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 20
+#| fig-height: 10
+#| out-width: "100%"
+#| fig-align: center
+
+library(leaflet)
+
+df <- read.csv("~/Documents/ATI_website/Data/masterdf.csv")
+
+df_subset <- data.frame(
+  lng  = df$Longitude,
+  lat  = df$Latitude,
+  poc  = df$Pocillopora_bleaching,
+  acro = df$Acropora_bleaching,
+  site = df$Site
+)
+
+# Shared domain across BOTH genera
+shared_domain <- range(
+  c(df_subset$poc, df_subset$acro),
+  na.rm = TRUE
+)
+
+pal <- colorNumeric(
+  palette = "viridis",
+  domain = shared_domain,
+  na.color = "transparent"
+)
+
+metadata <- paste0(
+  "Site ", df_subset$site,
+  "<hr>Pocillopora bleaching: ", round(df_subset$poc, 2), "%",
+  "<hr>Acropora bleaching: ", round(df_subset$acro, 2), "%"
+)
+
+leaflet(df_subset) %>%
+  addProviderTiles("Esri.WorldImagery") %>%
+  setView(lng = -149.84, lat = -17.5392, zoom = 12) %>%
+  
+  # Pocillopora layer
+  addCircleMarkers(
+    lng = ~lng, lat = ~lat,
+    color = ~pal(poc),
+    radius = 4,
+    opacity = 1, fillOpacity = 0.8,
+    popup = metadata,
+    group = "Pocillopora"
+  ) %>%
+  
+  # Acropora layer
+  addCircleMarkers(
+    lng = ~lng, lat = ~lat,
+    color = ~pal(acro),
+    radius = 4,
+    opacity = 1, fillOpacity = 0.8,
+    popup = metadata,
+    group = "Acropora"
+  ) %>%
+  
+  addLayersControl(
+    overlayGroups = c("Pocillopora", "Acropora"),
+    options = layersControlOptions(collapsed = FALSE)
+  ) %>%
+  
+  # Single shared legend
+  addLegend(
+    position = "bottomright",
+    pal = pal,
+    values = shared_domain,
+    title = "Bleaching (%)",
+    opacity = 1
+  )
+
+```

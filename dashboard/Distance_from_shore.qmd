@@ -1,10 +1,24 @@
 ---
 title: "Distance from shore"
-sidebar: dashboard
 format:
   dashboard:
     orientation: columns
 ---
+
+## Data Dashboard {.sidebar}
+
+-   [Habitat type](Habitat_type.html)
+-   [Distance from shore](Distance_from_shore.html)
+-   [Turbinaria](Turbinaria.html)
+-   [Water quality index](Water_quality_index.html)
+-   [Benthic coral cover](Benthic_coral_cover.html)
+-   [Benthic algal cover](Benthic_algal_cover.html)
+-   [Bleaching](Bleaching.html)
+-   [Bacterial eDNA](Bacterial_eDNA.html)
+-   [Fish eDNA](Fish_eDNA.html)
+-   [Fish visual surveys](Fish_visual_surveys.html)
+
+## Map
 
 ```{r}
 #| echo: false
