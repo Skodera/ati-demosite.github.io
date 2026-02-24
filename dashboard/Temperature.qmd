@@ -1,5 +1,5 @@
 ---
-title: "Coral Bleaching"
+title: "Temperature"
 format:
   dashboard:
     orientation: columns
@@ -33,69 +33,77 @@ format:
 
 library(leaflet)
 
-df <- read.csv("~/Documents/ATI_website/Data/masterdf.csv")
+df <- read.csv("~/Documents/ATI_website/Data/mastertemp.csv")
 
 df_subset <- data.frame(
-  lng  = df$Longitude,
-  lat  = df$Latitude,
-  poc  = df$Pocillopora_bleaching,
-  acro = df$Acropora_bleaching,
-  site = df$Site
+  lng = df$Longitude,
+  lat = df$Latitude,
+  meanRange = df$meanRange,
+  meanAprTemp = df$meanAprTemp,
+  site = df$site
 )
 
-# Shared domain across BOTH genera
-shared_domain <- range(
-  c(df_subset$poc, df_subset$acro),
-  na.rm = TRUE
-)
-
-pal <- colorNumeric(
+# Separate palettes for each variable (different scales)
+pal_range <- colorNumeric(
   palette = "viridis",
-  domain = shared_domain,
+  domain = range(df_subset$meanRange, na.rm = TRUE),
+  na.color = "transparent"
+)
+
+pal_temp <- colorNumeric(
+  palette = "plasma",
+  domain = range(df_subset$meanAprTemp, na.rm = TRUE),
   na.color = "transparent"
 )
 
 metadata <- paste0(
   "Site ", df_subset$site,
-  "<hr>Pocillopora bleaching: ", round(df_subset$poc, 2), "%",
-  "<hr>Acropora bleaching: ", round(df_subset$acro, 2), "%"
+  "<hr>Mean range: ", round(df_subset$meanRange, 2),
+  "<hr>Mean temp at April: ", round(df_subset$meanAprTemp, 2), "°C"
 )
 
 leaflet(df_subset) %>%
   addProviderTiles("Esri.WorldImagery") %>%
   setView(lng = -149.84, lat = -17.5392, zoom = 12) %>%
   
-  # Pocillopora layer
+  # Mean range layer
   addCircleMarkers(
     lng = ~lng, lat = ~lat,
-    color = ~pal(poc),
+    color = ~pal_range(meanRange),
     radius = 4,
     opacity = 1, fillOpacity = 0.8,
     popup = metadata,
-    group = "Pocillopora"
+    group = "Mean Range"
   ) %>%
   
-  # Acropora layer
+  # Mean April temp layer
   addCircleMarkers(
     lng = ~lng, lat = ~lat,
-    color = ~pal(acro),
+    color = ~pal_temp(meanAprTemp),
     radius = 4,
     opacity = 1, fillOpacity = 0.8,
     popup = metadata,
-    group = "Acropora"
+    group = "Mean Temp at April"
   ) %>%
   
   addLayersControl(
-    baseGroups = c("Pocillopora", "Acropora"),
+    baseGroups = c("Mean Range", "Mean Temp at April"),
     options = layersControlOptions(collapsed = FALSE)
   ) %>%
   
-  # Single shared legend
   addLegend(
     position = "bottomright",
-    pal = pal,
-    values = shared_domain,
-    title = "Bleaching (%)",
+    pal = pal_range,
+    values = ~meanRange,
+    title = "Mean Range",
+    opacity = 1
+  ) %>%
+  
+  addLegend(
+    position = "bottomleft",
+    pal = pal_temp,
+    values = ~meanAprTemp,
+    title = "Mean Temp at April (°C)",
     opacity = 1
   )
 

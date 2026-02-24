@@ -1,5 +1,5 @@
 ---
-title: "Coral Bleaching"
+title: "Coral Mortality"
 format:
   dashboard:
     orientation: columns
@@ -38,8 +38,8 @@ df <- read.csv("~/Documents/ATI_website/Data/masterdf.csv")
 df_subset <- data.frame(
   lng  = df$Longitude,
   lat  = df$Latitude,
-  poc  = df$Pocillopora_bleaching,
-  acro = df$Acropora_bleaching,
+  poc  = df$Pocillopora_mortality,
+  acro = df$Acropora_mortality,
   site = df$Site
 )
 
@@ -57,8 +57,8 @@ pal <- colorNumeric(
 
 metadata <- paste0(
   "Site ", df_subset$site,
-  "<hr>Pocillopora bleaching: ", round(df_subset$poc, 2), "%",
-  "<hr>Acropora bleaching: ", round(df_subset$acro, 2), "%"
+  "<hr>Pocillopora mortality: ", round(df_subset$poc, 2), "%",
+  "<hr>Acropora mortality: ", round(df_subset$acro, 2), "%"
 )
 
 leaflet(df_subset) %>%
@@ -95,7 +95,7 @@ leaflet(df_subset) %>%
     position = "bottomright",
     pal = pal,
     values = shared_domain,
-    title = "Bleaching (%)",
+    title = "Mortality (%)",
     opacity = 1
   )
 

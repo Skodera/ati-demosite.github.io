@@ -31,6 +31,8 @@ website:
           - dashboard/Benthic_coral_cover.qmd
           - dashboard/Benthic_algal_cover.qmd
           - dashboard/Bleaching.qmd
+          - dashboard/Coral_mortality.qmd
+          - dashboard/Temperature.qmd
           - dashboard/Bacterial_eDNA.qmd
           - dashboard/Fish_eDNA.qmd
           - dashboard/Fish_visual_surveys.qmd

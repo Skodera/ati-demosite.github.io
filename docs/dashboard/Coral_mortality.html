@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Coral Mortality – Around The Island of Moorea</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5b61cd51a76a88e9671091bf1b2c7eb9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5b61cd51a76a88e9671091bf1b2c7eb9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5b61cd51a76a88e9671091bf1b2c7eb9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="../site_libs/quarto-dashboard/stickythead.js"></script>
+
+
+
+<script src="../site_libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="../site_libs/quarto-dashboard/components.js"></script>
+
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="../site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="../site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="../site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
+<script src="../site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
+<script src="../site_libs/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js"></script>
+
+
+</head>
+
+<body class="quarto-dashboard nav-sidebar nav-fixed dashboard-fill dashboard-sidebar fullcontent quarto-light">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Around The Island of Moorea</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-dashboard" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Dashboard</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-dashboard">    
+        <li>
+    <a class="dropdown-item" href="../dashboard/Habitat_type.html">
+ <span class="dropdown-text">Habitat type</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../dashboard/Distance_from_shore.html">
+ <span class="dropdown-text">Distance from shore</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../dashboard/Turbinaria.html">
+ <span class="dropdown-text">Turbinaria</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../dashboard/Water_quality_index.html">
+ <span class="dropdown-text">Water quality index (unavailable)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../dashboard/Benthic_coral_cover.html">
+ <span class="dropdown-text">Benthic coral cover (unavailable)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../dashboard/Benthic_algal_cover.html">
+ <span class="dropdown-text">Benthic algal cover (unavailable)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../dashboard/Bleaching.html">
+ <span class="dropdown-text">Coral Bleaching</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../dashboard/Coral_mortality.html">
+ <span class="dropdown-text">Coral Mortality</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../dashboard/Temperature.html">
+ <span class="dropdown-text">Temperature</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../dashboard/Bacterial_eDNA.html">
+ <span class="dropdown-text">Bacterial eDNA (unavailable)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../dashboard/Fish_eDNA.html">
+ <span class="dropdown-text">Fish eDNA (unavailable)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../dashboard/Fish_visual_surveys.html">
+ <span class="dropdown-text">Fish visual surveys (unavailable)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../Time_series.html"> 
+<span class="menu-text">Time series</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Data_repository.html"> 
+<span class="menu-text">Repository</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Team.html"> 
+<span class="menu-text">Team</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler hidden" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">
+
+
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Coral Mortality</a></div>
+        
+        
+      </div>
+    </div>
+</div>
+</nav>
+</header></header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill dashboard-sidebar-container">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+<!-- main -->
+
+<div class="bslib-sidebar-layout html-fill-item html-fill-container" data-bslib-sidebar-open="desktop" data-bslib-sidebar-init="true" data-bslib-sidebar-border="false" data-bslib-sidebar-border-radius="false"><div class="main html-fill-container html-fill-item"><div class="sidebar-content html-fill-item html-fill-container">
+<div class="bslib-grid html-fill-item html-fill-container" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="bslib-grid html-fill-item html-fill-container" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell bslib-card html-fill-container html-fill-item" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="leaflet html-widget html-fill-item html-fill-container" id="htmlwidget-5f1207392be9e0a5664e" style="width:100%;height:960px;"></div>
+<script type="application/json" data-for="htmlwidget-5f1207392be9e0a5664e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[-17.587961,-17.59043,-17.590527,-17.584738,-17.585097,-17.57797,-17.57851,-17.582346,-17.574527,-17.575209,-17.57273,-17.593649,-17.567691,-17.582811,-17.58035,-17.58695,-17.593286,-17.595673,-17.598289,-17.602384,-17.593444,-17.603269,-17.592452,-17.593253,-17.594369,-17.591462,-17.594238,-17.598821,-17.597421,-17.59838,-17.59796,-17.59291,-17.587183,-17.580673,-17.583832,-17.579434,-17.573494,-17.56787,-17.572393,-17.575669,-17.570194,-17.569273,-17.562485,-17.561501,-17.560247,-17.557988,-17.593133,-17.594919,-17.577178,-17.601942,-17.554792,-17.548298,-17.545537,-17.540488,-17.543889,-17.540656,-17.541709,-17.54809,-17.543547,-17.552275,-17.535287,-17.535983,-17.535734,-17.529389,-17.524844,-17.528402,-17.522668,-17.520066,-17.515979,-17.510298,-17.510723,-17.521725,-17.516389,-17.505328,-17.503268,-17.500941,-17.502585,-17.500249,-17.604108,-17.563807,-17.565096,-17.568909,-17.56706,-17.560438,-17.563508,-17.558502,-17.558976,-17.561329,-17.554737,-17.555739,-17.557416,-17.550329,-17.546378,-17.547809,-17.544936,-17.538156,-17.540977,-17.541816,-17.532221,-17.534322,-17.537559,-17.529284,-17.527349,-17.525681,-17.520075,-17.519447,-17.518857,-17.512728,-17.511388,-17.51056,-17.503183,-17.503481,-17.502872,-17.495456,-17.495042,-17.49475,-17.490648,-17.489148,-17.485917,-17.487908,-17.488531,-17.484855,-17.488426,-17.484697,-17.490196,-17.491799,-17.488972,-17.486835,-17.489728,-17.484671,-17.488096,-17.487441,-17.490286,-17.48733,-17.484528,-17.486903,-17.483797,-17.492096,-17.490651,-17.497164,-17.493161,-17.49376,-17.490829,-17.48895,-17.489666,-17.485457,-17.481689,-17.483867,-17.486505,-17.484302,-17.478219,-17.480095,-17.478417,-17.479732,-17.484867,-17.485029,-17.481151,-17.48467,-17.486556,-17.482045,-17.473709,-17.475996,-17.477852,-17.478809,-17.479606,-17.47499,-17.472826,-17.47187,-17.474343,-17.47682,-17.474969,-17.48044,-17.47605,-17.472578,-17.480822,-17.482564,-17.483836,-17.48729,-17.481202,-17.477079,-17.47478,-17.478314,-17.480347,-17.474995,-17.476912,-17.477115,-17.478994,-17.478068,-17.49044,-17.58183,-17.58791,-17.50637,-17.50963,-17.55094,-17.56594,-17.57248,-17.55015,-17.5528,-17.55789,-17.475613,-17.497183,-17.490317,-17.47825,-17.477073,-17.485,-17.477217,-17.473961,-17.480267,-17.5138,-17.514057,-17.51305,-17.54365,-17.544753,-17.54295,-17.579333,-17.58017,-17.579,-17.52095,-17.5212,-17.515533,-17.508434,-17.506539],[-149.850116,-149.851314,-149.861271,-149.858435,-149.867294,-149.87319,-149.862221,-149.854524,-149.874002,-149.870001,-149.866158,-149.848239,-149.870573,-149.866259,-149.8535,-149.842608,-149.839035,-149.840803,-149.839801,-149.830339,-149.826245,-149.810896,-149.815199,-149.809543,-149.806754,-149.803712,-149.79641,-149.819394,-149.828384,-149.810767,-149.803888,-149.799892,-149.790909,-149.7936,-149.798549,-149.796835,-149.794288,-149.792503,-149.788326,-149.788527,-149.787395,-149.789657,-149.783034,-149.785492,-149.789101,-149.780943,-149.854662,-149.817182,-149.861017,-149.80215,-149.789116,-149.780663,-149.778254,-149.773951,-149.774748,-149.770382,-149.766566,-149.773243,-149.770607,-149.777398,-149.772664,-149.767993,-149.762938,-149.767333,-149.764952,-149.773503,-149.779369,-149.773832,-149.768779,-149.766588,-149.763027,-149.764364,-149.764206,-149.760933,-149.764534,-149.762722,-149.759752,-149.757646,-149.821035,-149.874345,-149.877559,-149.878538,-149.88305,-149.886526,-149.881216,-149.88263,-149.878843,-149.876633,-149.885592,-149.887923,-149.890511,-149.897047,-149.89117,-149.894962,-149.902229,-149.904489,-149.906763,-149.898513,-149.905889,-149.910132,-149.912111,-149.918163,-149.914027,-149.910743,-149.920625,-149.917057,-149.913273,-149.922592,-149.919454,-149.915916,-149.924037,-149.920637,-149.91747,-149.923573,-149.919711,-149.914604,-149.911101,-149.906751,-149.907793,-149.902252,-149.896858,-149.896235,-149.892149,-149.892281,-149.882664,-149.87949,-149.878985,-149.876504,-149.87265,-149.874217,-149.866756,-149.870969,-149.886899,-149.887007,-149.886128,-149.880574,-149.879811,-149.874647,-149.868119,-149.862644,-149.867373,-149.85192,-149.854418,-149.855001,-149.84942,-149.846988,-149.849865,-149.849021,-149.85203,-149.842015,-149.84236,-149.842276,-149.833981,-149.836532,-149.834793,-149.831273,-149.830138,-149.827516,-149.825057,-149.82621,-149.776853,-149.780356,-149.786654,-149.790986,-149.796129,-149.786723,-149.781029,-149.786553,-149.793743,-149.795012,-149.790116,-149.799661,-149.797369,-149.777858,-149.804837,-149.813851,-149.816814,-149.818393,-149.817599,-149.821236,-149.814886,-149.813539,-149.813651,-149.806126,-149.806627,-149.802503,-149.80634,-149.817243,-149.89176,-149.78965,-149.80488,-149.91716,-149.76818,-149.78795,-149.79259,-149.79544,-149.88495,-149.88307,-149.87744,-149.784324,-149.818048,-149.825527,-149.842267,-149.842658,-149.834083,-149.802333,-149.802088,-149.799567,-149.76415,-149.762344,-149.766883,-149.769483,-149.768273,-149.77415,-149.871433,-149.873353,-149.86425,-149.920783,-149.922426,-149.914517,-149.852588,-149.857605],4,null,"Pocillopora",{"interactive":true,"className":"","stroke":true,"color":["transparent","transparent","#46095C","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#48186A","transparent","transparent","transparent","transparent","#470F62","transparent","transparent","transparent","#460A5D","transparent","#471366","transparent","transparent","transparent","transparent","transparent","transparent","#472E7C","transparent","transparent","#471365","transparent","transparent","#48186A","#470E61","transparent","transparent","#460A5D","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#470D60","transparent","transparent","#450559","transparent","#440155","transparent","transparent","transparent","transparent","transparent","transparent","#482677","#471365","#450659","transparent","transparent","#450357","#481568","transparent","transparent","transparent","transparent","#481F70","#482273","transparent","transparent","transparent","transparent","transparent","transparent","#460B5E","#482071","transparent","#460B5E","#471063","transparent","transparent","transparent","transparent","transparent","#460A5D","#481A6C","transparent","transparent","transparent","#48196B","transparent","#46085C","transparent","transparent","#481C6E","#460B5E","transparent","#482475","transparent","transparent","transparent","transparent","#470F62","#450457","transparent","#482475","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#46337F","#365C8D","#482778","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#27808E","#481F70","#46337F","transparent","transparent","#482979","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#460A5D","#481A6C","transparent","#470F62","#481F70","#470D60","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#482677","transparent","transparent","transparent","#471365","transparent","#450457","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent"],"weight":5,"opacity":1,"fill":true,"fillColor":["transparent","transparent","#46095C","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#48186A","transparent","transparent","transparent","transparent","#470F62","transparent","transparent","transparent","#460A5D","transparent","#471366","transparent","transparent","transparent","transparent","transparent","transparent","#472E7C","transparent","transparent","#471365","transparent","transparent","#48186A","#470E61","transparent","transparent","#460A5D","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#470D60","transparent","transparent","#450559","transparent","#440155","transparent","transparent","transparent","transparent","transparent","transparent","#482677","#471365","#450659","transparent","transparent","#450357","#481568","transparent","transparent","transparent","transparent","#481F70","#482273","transparent","transparent","transparent","transparent","transparent","transparent","#460B5E","#482071","transparent","#460B5E","#471063","transparent","transparent","transparent","transparent","transparent","#460A5D","#481A6C","transparent","transparent","transparent","#48196B","transparent","#46085C","transparent","transparent","#481C6E","#460B5E","transparent","#482475","transparent","transparent","transparent","transparent","#470F62","#450457","transparent","#482475","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#46337F","#365C8D","#482778","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#27808E","#481F70","#46337F","transparent","transparent","#482979","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#460A5D","#481A6C","transparent","#470F62","#481F70","#470D60","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#482677","transparent","transparent","transparent","#471365","transparent","#450457","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent"],"fillOpacity":0.8},null,null,["Site 001<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 002<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 003<hr>Pocillopora mortality: 2.14%<hr>Acropora mortality: 44.64%","Site 004<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 005<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 006<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 007<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 008<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 009<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 010<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 011<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 012<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 013<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 014<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 015<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 016<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 017<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 018<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 019<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 020<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 021<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 022<hr>Pocillopora mortality: 6.31%<hr>Acropora mortality: 38.24%","Site 023<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 024<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 025<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 026<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 027<hr>Pocillopora mortality: 3.82%<hr>Acropora mortality: 21%","Site 028<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 029<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 030<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 031<hr>Pocillopora mortality: 2.5%<hr>Acropora mortality: 0%","Site 032<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 033<hr>Pocillopora mortality: 4.86%<hr>Acropora mortality: 47.19%","Site 034<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 035<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 036<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 037<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 038<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 039<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 040<hr>Pocillopora mortality: 12.81%<hr>Acropora mortality: 21.67%","Site 041<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 042<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 043<hr>Pocillopora mortality: 4.65%<hr>Acropora mortality: 5.59%","Site 044<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 045<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 046<hr>Pocillopora mortality: 6.32%<hr>Acropora mortality: 0%","Site 047<hr>Pocillopora mortality: 3.39%<hr>Acropora mortality: 29.06%","Site 048<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 049<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 050<hr>Pocillopora mortality: 2.5%<hr>Acropora mortality: 28.08%","Site 051<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 052<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 053<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 054<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 055<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 056<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 057<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 058<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 059<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 060<hr>Pocillopora mortality: 3.27%<hr>Acropora mortality: 24%","Site 061<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 062<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 063<hr>Pocillopora mortality: 1.22%<hr>Acropora mortality: 13.33%","Site 064<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 065<hr>Pocillopora mortality: 0.14%<hr>Acropora mortality: 1.75%","Site 066<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 067<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 068<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 069<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 070<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 071<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 072<hr>Pocillopora mortality: 10.6%<hr>Acropora mortality: 17.19%","Site 073<hr>Pocillopora mortality: 4.77%<hr>Acropora mortality: 45.75%","Site 074<hr>Pocillopora mortality: 1.36%<hr>Acropora mortality: 23.19%","Site 075<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 076<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 077<hr>Pocillopora mortality: 0.6%<hr>Acropora mortality: 22.06%","Site 078<hr>Pocillopora mortality: 5.34%<hr>Acropora mortality: 34%","Site 079<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 080<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 081<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 082<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 083<hr>Pocillopora mortality: 8.23%<hr>Acropora mortality: 43.75%","Site 084<hr>Pocillopora mortality: 9.15%<hr>Acropora mortality: 41.52%","Site 085<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 086<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 087<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 088<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 089<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 090<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 091<hr>Pocillopora mortality: 2.56%<hr>Acropora mortality: 42.97%","Site 092<hr>Pocillopora mortality: 8.72%<hr>Acropora mortality: 55.61%","Site 093<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 094<hr>Pocillopora mortality: 2.8%<hr>Acropora mortality: 100%","Site 095<hr>Pocillopora mortality: 4.05%<hr>Acropora mortality: 36.83%","Site 096<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 097<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 098<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 099<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 100<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 101<hr>Pocillopora mortality: 2.34%<hr>Acropora mortality: 69.17%","Site 102<hr>Pocillopora mortality: 6.86%<hr>Acropora mortality: 29.13%","Site 103<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 104<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 105<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 106<hr>Pocillopora mortality: 6.43%<hr>Acropora mortality: 30%","Site 107<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 108<hr>Pocillopora mortality: 2%<hr>Acropora mortality: 62.95%","Site 109<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 110<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 111<hr>Pocillopora mortality: 7.45%<hr>Acropora mortality: 52.06%","Site 112<hr>Pocillopora mortality: 2.7%<hr>Acropora mortality: 0%","Site 113<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 114<hr>Pocillopora mortality: 9.76%<hr>Acropora mortality: 64.29%","Site 115<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 116<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 117<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 118<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 119<hr>Pocillopora mortality: 3.81%<hr>Acropora mortality: 50.74%","Site 120<hr>Pocillopora mortality: 0.88%<hr>Acropora mortality: 7.22%","Site 121<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 122<hr>Pocillopora mortality: 9.66%<hr>Acropora mortality: 27.5%","Site 123<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 124<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 125<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 126<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 127<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 128<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 129<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 130<hr>Pocillopora mortality: 14.38%<hr>Acropora mortality: 34.53%","Site 131<hr>Pocillopora mortality: 28.82%<hr>Acropora mortality: 30.18%","Site 132<hr>Pocillopora mortality: 10.86%<hr>Acropora mortality: 33.33%","Site 133<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 134<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 135<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 136<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 137<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 138<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 139<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 140<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 141<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 142<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 143<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 144<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 145<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 146<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 147<hr>Pocillopora mortality: 43.22%<hr>Acropora mortality: 28%","Site 148<hr>Pocillopora mortality: 8.31%<hr>Acropora mortality: 59.71%","Site 149<hr>Pocillopora mortality: 14.7%<hr>Acropora mortality: 60%","Site 150<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 151<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 152<hr>Pocillopora mortality: 11.31%<hr>Acropora mortality: 50%","Site 153<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 154<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 155<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 156<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 157<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 158<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 159<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 160<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 161<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 162<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 163<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 164<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 165<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 166<hr>Pocillopora mortality: 2.5%<hr>Acropora mortality: 25%","Site 167<hr>Pocillopora mortality: 6.7%<hr>Acropora mortality: 0%","Site 168<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 169<hr>Pocillopora mortality: 3.75%<hr>Acropora mortality: 25.71%","Site 170<hr>Pocillopora mortality: 8.31%<hr>Acropora mortality: 14.62%","Site 171<hr>Pocillopora mortality: 3.24%<hr>Acropora mortality: 26.67%","Site 172<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 173<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 174<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 175<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 176<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 177<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 178<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 179<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 180<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 181<hr>Pocillopora mortality: 10.56%<hr>Acropora mortality: 31.15%","Site 182<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 183<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 184<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 185<hr>Pocillopora mortality: 4.77%<hr>Acropora mortality: 32.33%","Site 186<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 187<hr>Pocillopora mortality: 0.87%<hr>Acropora mortality: 0%","Site 188<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 200<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 201<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 202<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 203<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 204<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 205<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 206<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 207<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 208<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 209<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 210<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site CG_1<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site COOK_1<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site GUMP<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_1_BACK<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_1_CREST<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_1_FRINGE<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_2_BACK<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_2_CREST<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_2_FRINGE<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_3_BACK<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_3_CREST<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_3_FRINGE<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_4_BACK<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_4_CREST<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_4_FRINGE<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_5_BACK<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_5_CREST<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_5_FRINGE<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_6_BACK<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_6_CREST<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_6_FRINGE<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site OPU_1<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site OPU_2<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[-17.587961,-17.59043,-17.590527,-17.584738,-17.585097,-17.57797,-17.57851,-17.582346,-17.574527,-17.575209,-17.57273,-17.593649,-17.567691,-17.582811,-17.58035,-17.58695,-17.593286,-17.595673,-17.598289,-17.602384,-17.593444,-17.603269,-17.592452,-17.593253,-17.594369,-17.591462,-17.594238,-17.598821,-17.597421,-17.59838,-17.59796,-17.59291,-17.587183,-17.580673,-17.583832,-17.579434,-17.573494,-17.56787,-17.572393,-17.575669,-17.570194,-17.569273,-17.562485,-17.561501,-17.560247,-17.557988,-17.593133,-17.594919,-17.577178,-17.601942,-17.554792,-17.548298,-17.545537,-17.540488,-17.543889,-17.540656,-17.541709,-17.54809,-17.543547,-17.552275,-17.535287,-17.535983,-17.535734,-17.529389,-17.524844,-17.528402,-17.522668,-17.520066,-17.515979,-17.510298,-17.510723,-17.521725,-17.516389,-17.505328,-17.503268,-17.500941,-17.502585,-17.500249,-17.604108,-17.563807,-17.565096,-17.568909,-17.56706,-17.560438,-17.563508,-17.558502,-17.558976,-17.561329,-17.554737,-17.555739,-17.557416,-17.550329,-17.546378,-17.547809,-17.544936,-17.538156,-17.540977,-17.541816,-17.532221,-17.534322,-17.537559,-17.529284,-17.527349,-17.525681,-17.520075,-17.519447,-17.518857,-17.512728,-17.511388,-17.51056,-17.503183,-17.503481,-17.502872,-17.495456,-17.495042,-17.49475,-17.490648,-17.489148,-17.485917,-17.487908,-17.488531,-17.484855,-17.488426,-17.484697,-17.490196,-17.491799,-17.488972,-17.486835,-17.489728,-17.484671,-17.488096,-17.487441,-17.490286,-17.48733,-17.484528,-17.486903,-17.483797,-17.492096,-17.490651,-17.497164,-17.493161,-17.49376,-17.490829,-17.48895,-17.489666,-17.485457,-17.481689,-17.483867,-17.486505,-17.484302,-17.478219,-17.480095,-17.478417,-17.479732,-17.484867,-17.485029,-17.481151,-17.48467,-17.486556,-17.482045,-17.473709,-17.475996,-17.477852,-17.478809,-17.479606,-17.47499,-17.472826,-17.47187,-17.474343,-17.47682,-17.474969,-17.48044,-17.47605,-17.472578,-17.480822,-17.482564,-17.483836,-17.48729,-17.481202,-17.477079,-17.47478,-17.478314,-17.480347,-17.474995,-17.476912,-17.477115,-17.478994,-17.478068,-17.49044,-17.58183,-17.58791,-17.50637,-17.50963,-17.55094,-17.56594,-17.57248,-17.55015,-17.5528,-17.55789,-17.475613,-17.497183,-17.490317,-17.47825,-17.477073,-17.485,-17.477217,-17.473961,-17.480267,-17.5138,-17.514057,-17.51305,-17.54365,-17.544753,-17.54295,-17.579333,-17.58017,-17.579,-17.52095,-17.5212,-17.515533,-17.508434,-17.506539],[-149.850116,-149.851314,-149.861271,-149.858435,-149.867294,-149.87319,-149.862221,-149.854524,-149.874002,-149.870001,-149.866158,-149.848239,-149.870573,-149.866259,-149.8535,-149.842608,-149.839035,-149.840803,-149.839801,-149.830339,-149.826245,-149.810896,-149.815199,-149.809543,-149.806754,-149.803712,-149.79641,-149.819394,-149.828384,-149.810767,-149.803888,-149.799892,-149.790909,-149.7936,-149.798549,-149.796835,-149.794288,-149.792503,-149.788326,-149.788527,-149.787395,-149.789657,-149.783034,-149.785492,-149.789101,-149.780943,-149.854662,-149.817182,-149.861017,-149.80215,-149.789116,-149.780663,-149.778254,-149.773951,-149.774748,-149.770382,-149.766566,-149.773243,-149.770607,-149.777398,-149.772664,-149.767993,-149.762938,-149.767333,-149.764952,-149.773503,-149.779369,-149.773832,-149.768779,-149.766588,-149.763027,-149.764364,-149.764206,-149.760933,-149.764534,-149.762722,-149.759752,-149.757646,-149.821035,-149.874345,-149.877559,-149.878538,-149.88305,-149.886526,-149.881216,-149.88263,-149.878843,-149.876633,-149.885592,-149.887923,-149.890511,-149.897047,-149.89117,-149.894962,-149.902229,-149.904489,-149.906763,-149.898513,-149.905889,-149.910132,-149.912111,-149.918163,-149.914027,-149.910743,-149.920625,-149.917057,-149.913273,-149.922592,-149.919454,-149.915916,-149.924037,-149.920637,-149.91747,-149.923573,-149.919711,-149.914604,-149.911101,-149.906751,-149.907793,-149.902252,-149.896858,-149.896235,-149.892149,-149.892281,-149.882664,-149.87949,-149.878985,-149.876504,-149.87265,-149.874217,-149.866756,-149.870969,-149.886899,-149.887007,-149.886128,-149.880574,-149.879811,-149.874647,-149.868119,-149.862644,-149.867373,-149.85192,-149.854418,-149.855001,-149.84942,-149.846988,-149.849865,-149.849021,-149.85203,-149.842015,-149.84236,-149.842276,-149.833981,-149.836532,-149.834793,-149.831273,-149.830138,-149.827516,-149.825057,-149.82621,-149.776853,-149.780356,-149.786654,-149.790986,-149.796129,-149.786723,-149.781029,-149.786553,-149.793743,-149.795012,-149.790116,-149.799661,-149.797369,-149.777858,-149.804837,-149.813851,-149.816814,-149.818393,-149.817599,-149.821236,-149.814886,-149.813539,-149.813651,-149.806126,-149.806627,-149.802503,-149.80634,-149.817243,-149.89176,-149.78965,-149.80488,-149.91716,-149.76818,-149.78795,-149.79259,-149.79544,-149.88495,-149.88307,-149.87744,-149.784324,-149.818048,-149.825527,-149.842267,-149.842658,-149.834083,-149.802333,-149.802088,-149.799567,-149.76415,-149.762344,-149.766883,-149.769483,-149.768273,-149.77415,-149.871433,-149.873353,-149.86425,-149.920783,-149.922426,-149.914517,-149.852588,-149.857605],4,null,"Acropora",{"interactive":true,"className":"","stroke":true,"color":["transparent","transparent","#25838E","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#2C748E","transparent","transparent","transparent","transparent","#3F4788","transparent","transparent","transparent","#440154","transparent","#23898E","transparent","transparent","transparent","transparent","transparent","transparent","#3F4889","transparent","transparent","#481668","transparent","transparent","#440154","#365D8D","transparent","transparent","#375B8D","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#3C4F8A","transparent","transparent","#472F7D","transparent","#46075B","transparent","transparent","transparent","transparent","transparent","transparent","#443B84","#24868E","#3D4D8A","transparent","transparent","#3E4989","#306A8E","transparent","transparent","transparent","transparent","#26828E","#287C8E","transparent","transparent","transparent","transparent","transparent","transparent","#27808E","#1F9E89","transparent","#FDE725","#2D718E","transparent","transparent","transparent","transparent","transparent","#3FBC73","#365D8D","transparent","transparent","transparent","#35608D","transparent","#29AF7F","transparent","transparent","#1F958B","#440154","transparent","#2DB27D","transparent","transparent","transparent","transparent","#20928C","#481B6D","transparent","#38598C","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#2F6B8E","#34608D","#31688E","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#375A8C","#22A785","#22A884","transparent","transparent","#21908D","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#3B528B","#440154","transparent","#3A548C","#46337F","#39568C","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#33628D","transparent","transparent","transparent","#32658E","transparent","#440154","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent"],"weight":5,"opacity":1,"fill":true,"fillColor":["transparent","transparent","#25838E","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#2C748E","transparent","transparent","transparent","transparent","#3F4788","transparent","transparent","transparent","#440154","transparent","#23898E","transparent","transparent","transparent","transparent","transparent","transparent","#3F4889","transparent","transparent","#481668","transparent","transparent","#440154","#365D8D","transparent","transparent","#375B8D","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#3C4F8A","transparent","transparent","#472F7D","transparent","#46075B","transparent","transparent","transparent","transparent","transparent","transparent","#443B84","#24868E","#3D4D8A","transparent","transparent","#3E4989","#306A8E","transparent","transparent","transparent","transparent","#26828E","#287C8E","transparent","transparent","transparent","transparent","transparent","transparent","#27808E","#1F9E89","transparent","#FDE725","#2D718E","transparent","transparent","transparent","transparent","transparent","#3FBC73","#365D8D","transparent","transparent","transparent","#35608D","transparent","#29AF7F","transparent","transparent","#1F958B","#440154","transparent","#2DB27D","transparent","transparent","transparent","transparent","#20928C","#481B6D","transparent","#38598C","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#2F6B8E","#34608D","#31688E","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#375A8C","#22A785","#22A884","transparent","transparent","#21908D","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#3B528B","#440154","transparent","#3A548C","#46337F","#39568C","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","#33628D","transparent","transparent","transparent","#32658E","transparent","#440154","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent","transparent"],"fillOpacity":0.8},null,null,["Site 001<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 002<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 003<hr>Pocillopora mortality: 2.14%<hr>Acropora mortality: 44.64%","Site 004<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 005<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 006<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 007<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 008<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 009<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 010<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 011<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 012<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 013<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 014<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 015<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 016<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 017<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 018<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 019<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 020<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 021<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 022<hr>Pocillopora mortality: 6.31%<hr>Acropora mortality: 38.24%","Site 023<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 024<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 025<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 026<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 027<hr>Pocillopora mortality: 3.82%<hr>Acropora mortality: 21%","Site 028<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 029<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 030<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 031<hr>Pocillopora mortality: 2.5%<hr>Acropora mortality: 0%","Site 032<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 033<hr>Pocillopora mortality: 4.86%<hr>Acropora mortality: 47.19%","Site 034<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 035<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 036<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 037<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 038<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 039<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 040<hr>Pocillopora mortality: 12.81%<hr>Acropora mortality: 21.67%","Site 041<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 042<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 043<hr>Pocillopora mortality: 4.65%<hr>Acropora mortality: 5.59%","Site 044<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 045<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 046<hr>Pocillopora mortality: 6.32%<hr>Acropora mortality: 0%","Site 047<hr>Pocillopora mortality: 3.39%<hr>Acropora mortality: 29.06%","Site 048<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 049<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 050<hr>Pocillopora mortality: 2.5%<hr>Acropora mortality: 28.08%","Site 051<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 052<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 053<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 054<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 055<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 056<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 057<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 058<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 059<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 060<hr>Pocillopora mortality: 3.27%<hr>Acropora mortality: 24%","Site 061<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 062<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 063<hr>Pocillopora mortality: 1.22%<hr>Acropora mortality: 13.33%","Site 064<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 065<hr>Pocillopora mortality: 0.14%<hr>Acropora mortality: 1.75%","Site 066<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 067<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 068<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 069<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 070<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 071<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 072<hr>Pocillopora mortality: 10.6%<hr>Acropora mortality: 17.19%","Site 073<hr>Pocillopora mortality: 4.77%<hr>Acropora mortality: 45.75%","Site 074<hr>Pocillopora mortality: 1.36%<hr>Acropora mortality: 23.19%","Site 075<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 076<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 077<hr>Pocillopora mortality: 0.6%<hr>Acropora mortality: 22.06%","Site 078<hr>Pocillopora mortality: 5.34%<hr>Acropora mortality: 34%","Site 079<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 080<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 081<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 082<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 083<hr>Pocillopora mortality: 8.23%<hr>Acropora mortality: 43.75%","Site 084<hr>Pocillopora mortality: 9.15%<hr>Acropora mortality: 41.52%","Site 085<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 086<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 087<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 088<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 089<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 090<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 091<hr>Pocillopora mortality: 2.56%<hr>Acropora mortality: 42.97%","Site 092<hr>Pocillopora mortality: 8.72%<hr>Acropora mortality: 55.61%","Site 093<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 094<hr>Pocillopora mortality: 2.8%<hr>Acropora mortality: 100%","Site 095<hr>Pocillopora mortality: 4.05%<hr>Acropora mortality: 36.83%","Site 096<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 097<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 098<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 099<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 100<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 101<hr>Pocillopora mortality: 2.34%<hr>Acropora mortality: 69.17%","Site 102<hr>Pocillopora mortality: 6.86%<hr>Acropora mortality: 29.13%","Site 103<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 104<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 105<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 106<hr>Pocillopora mortality: 6.43%<hr>Acropora mortality: 30%","Site 107<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 108<hr>Pocillopora mortality: 2%<hr>Acropora mortality: 62.95%","Site 109<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 110<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 111<hr>Pocillopora mortality: 7.45%<hr>Acropora mortality: 52.06%","Site 112<hr>Pocillopora mortality: 2.7%<hr>Acropora mortality: 0%","Site 113<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 114<hr>Pocillopora mortality: 9.76%<hr>Acropora mortality: 64.29%","Site 115<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 116<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 117<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 118<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 119<hr>Pocillopora mortality: 3.81%<hr>Acropora mortality: 50.74%","Site 120<hr>Pocillopora mortality: 0.88%<hr>Acropora mortality: 7.22%","Site 121<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 122<hr>Pocillopora mortality: 9.66%<hr>Acropora mortality: 27.5%","Site 123<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 124<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 125<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 126<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 127<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 128<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 129<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 130<hr>Pocillopora mortality: 14.38%<hr>Acropora mortality: 34.53%","Site 131<hr>Pocillopora mortality: 28.82%<hr>Acropora mortality: 30.18%","Site 132<hr>Pocillopora mortality: 10.86%<hr>Acropora mortality: 33.33%","Site 133<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 134<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 135<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 136<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 137<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 138<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 139<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 140<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 141<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 142<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 143<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 144<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 145<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 146<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 147<hr>Pocillopora mortality: 43.22%<hr>Acropora mortality: 28%","Site 148<hr>Pocillopora mortality: 8.31%<hr>Acropora mortality: 59.71%","Site 149<hr>Pocillopora mortality: 14.7%<hr>Acropora mortality: 60%","Site 150<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 151<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 152<hr>Pocillopora mortality: 11.31%<hr>Acropora mortality: 50%","Site 153<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 154<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 155<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 156<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 157<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 158<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 159<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 160<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 161<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 162<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 163<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 164<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 165<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 166<hr>Pocillopora mortality: 2.5%<hr>Acropora mortality: 25%","Site 167<hr>Pocillopora mortality: 6.7%<hr>Acropora mortality: 0%","Site 168<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 169<hr>Pocillopora mortality: 3.75%<hr>Acropora mortality: 25.71%","Site 170<hr>Pocillopora mortality: 8.31%<hr>Acropora mortality: 14.62%","Site 171<hr>Pocillopora mortality: 3.24%<hr>Acropora mortality: 26.67%","Site 172<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 173<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 174<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 175<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 176<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 177<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 178<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 179<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 180<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 181<hr>Pocillopora mortality: 10.56%<hr>Acropora mortality: 31.15%","Site 182<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 183<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 184<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 185<hr>Pocillopora mortality: 4.77%<hr>Acropora mortality: 32.33%","Site 186<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 187<hr>Pocillopora mortality: 0.87%<hr>Acropora mortality: 0%","Site 188<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 200<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 201<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 202<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 203<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 204<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 205<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 206<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 207<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 208<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 209<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site 210<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site CG_1<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site COOK_1<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site GUMP<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_1_BACK<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_1_CREST<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_1_FRINGE<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_2_BACK<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_2_CREST<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_2_FRINGE<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_3_BACK<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_3_CREST<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_3_FRINGE<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_4_BACK<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_4_CREST<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_4_FRINGE<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_5_BACK<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_5_CREST<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_5_FRINGE<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_6_BACK<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_6_CREST<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site LTER_6_FRINGE<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site OPU_1<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%","Site OPU_2<hr>Pocillopora mortality: NA%<hr>Acropora mortality: NA%"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[["Pocillopora","Acropora"],[],{"collapsed":false,"autoZIndex":true,"position":"topright"}]},{"method":"addLegend","args":[{"colors":["#440154 , #440154 0%, #414487 20%, #2A788E 40%, #22A884 60%, #7AD151 80%, #FDE725 100%, #FDE725 "],"labels":["0","20","40","60","80","100"],"na_color":null,"na_label":"NA","opacity":1,"position":"bottomright","type":"numeric","title":"Mortality (%)","extra":{"p_1":0,"p_n":1},"layerId":null,"className":"info legend","group":null}]}],"setView":[[-17.5392,-149.84],12,[]],"limits":{"lat":[-17.604108,-17.47187],"lng":[-149.924037,-149.757646]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+
+
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div></div><aside id="bslib-sidebar-1" class="sidebar html-fill-container html-fill-item"><div class="html-fill-container html-fill-item">
+<ul>
+<li><a href="Habitat_type.html">Habitat type</a></li>
+<li><a href="Distance_from_shore.html">Distance from shore</a></li>
+<li><a href="Turbinaria.html">Turbinaria</a></li>
+<li><a href="Water_quality_index.html">Water quality index</a></li>
+<li><a href="Benthic_coral_cover.html">Benthic coral cover</a></li>
+<li><a href="Benthic_algal_cover.html">Benthic algal cover</a></li>
+<li><a href="Bleaching.html">Coral Bleaching</a></li>
+<li><a href="Coral_mortality.html">Coral Mortality</a></li>
+<li><a href="Temperature.html">Temperature</a></li>
+<li><a href="Bacterial_eDNA.html">Bacterial eDNA</a></li>
+<li><a href="Fish_eDNA.html">Fish eDNA</a></li>
+<li><a href="Fish_visual_surveys.html">Fish visual surveys</a></li>
+</ul>
+</div></aside>
+<button class="collapse-toggle" type="button" title="Toggle sidebar" aria-expanded="true" aria-controls="bslib-sidebar-1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-chevron-left collapse-icon" style="fill:currentColor;" aria-hidden="true" role="img">
+      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+    </svg>
+</button>
+<script data-bslib-sidebar-init="">
+bslib.Sidebar.initCollapsibleAll()
+</script>
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
+
+
+
+</body></html>

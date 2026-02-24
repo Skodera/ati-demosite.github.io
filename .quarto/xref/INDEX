@@ -58,5 +58,11 @@
   },
   "Data_dashboard_2.qmd": {
     "Data_dashboard_2.html": "f661f3fb"
+  },
+  "dashboard/Coral_mortality.qmd": {
+    "Coral_mortality.html": "00d97f8e"
+  },
+  "dashboard/Temperature.qmd": {
+    "Temperature.html": "064fcfc2"
   }
 }
