@@ -51,7 +51,7 @@ leaflet() %>%
   addLegend(data = df_subset,
             position = "bottomright",
             pal = pal, values = ~values,
-            title = "Bacterial richness",
+            title = "Bacterial richness (out of 5000 reads)",
             opacity = 1)
 
 ```

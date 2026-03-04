@@ -1,5 +1,5 @@
 ---
-title: "Benthic coral cover (unavailable)"
+title: "Benthic coral cover"
 format:
   dashboard:
     orientation: columns
@@ -7,15 +7,96 @@ format:
 
 ## Data Dashboard {.sidebar}
 
-- [Habitat type](Habitat_type.html)
-- [Distance from shore](Distance_from_shore.html)
-- [Turbinaria](Turbinaria.html)
-- [Water quality index](Water_quality_index.html)
-- [Benthic coral cover](Benthic_coral_cover.html)
-- [Benthic algal cover](Benthic_algal_cover.html)
-- [Coral Bleaching](Bleaching.html)
-- [Coral Mortality](Coral_mortality.html)
-- [Temperature](Temperature.html)
-- [Bacterial eDNA](Bacterial_eDNA.html)
-- [Fish eDNA](Fish_eDNA.html)
-- [Fish visual surveys](Fish_visual_surveys.html)
+-   [Habitat type](Habitat_type.html)
+-   [Distance from shore](Distance_from_shore.html)
+-   [Turbinaria](Turbinaria.html)
+-   [Water quality index](Water_quality_index.html)
+-   [Benthic coral cover](Benthic_coral_cover.html)
+-   [Benthic algal cover](Benthic_algal_cover.html)
+-   [Coral Bleaching](Bleaching.html)
+-   [Coral Mortality](Coral_mortality.html)
+-   [Temperature](Temperature.html)
+-   [Bacterial eDNA](Bacterial_eDNA.html)
+-   [Fish eDNA](Fish_eDNA.html)
+-   [Fish visual surveys](Fish_visual_surveys.html)
+
+## Map
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 20
+#| fig-height: 10
+#| out-width: "100%"
+#| fig-align: center
+
+library(leaflet)
+
+df <- read.csv("~/Documents/ATI_website/Data/masterdf.csv")
+
+df_subset <- data.frame(
+  lng  = df$Longitude,
+  lat  = df$Latitude,
+  coral = df$Mean_coral,
+  algae = df$Mean_algae,
+  site = df$Site
+)
+
+# Shared domain across BOTH
+shared_domain <- range(
+  c(df_subset$coral, df_subset$algae),
+  na.rm = TRUE
+)
+
+pal <- colorNumeric(
+  palette = "viridis",
+  domain = shared_domain,
+  na.color = "transparent"
+)
+
+metadata <- paste0(
+  "Site ", df_subset$site,
+  "<hr>Mean coral: ", round(df_subset$coral, 2),
+  "<hr>Mean algae: ", round(df_subset$algae, 2)
+)
+
+leaflet(df_subset) %>%
+  addProviderTiles("Esri.WorldImagery") %>%
+  setView(lng = -149.84, lat = -17.5392, zoom = 12) %>%
+  
+  # Mean coral layer
+  addCircleMarkers(
+    lng = ~lng, lat = ~lat,
+    color = ~pal(coral),
+    radius = 4,
+    opacity = 1, fillOpacity = 0.8,
+    popup = metadata,
+    group = "Mean coral cover from 2022-2025"
+  ) %>%
+  
+  # Mean algae layer
+  addCircleMarkers(
+    lng = ~lng, lat = ~lat,
+    color = ~pal(algae),
+    radius = 4,
+    opacity = 1, fillOpacity = 0.8,
+    popup = metadata,
+    group = "Mean algae cover from 2022-2025"
+  ) %>%
+  
+  addLayersControl(
+    baseGroups = c("Mean coral cover from 2022-2025", "Mean algae cover from 2022-2025"),
+    options = layersControlOptions(collapsed = FALSE)
+  ) %>%
+  
+  # Single shared legend
+  addLegend(
+    position = "bottomright",
+    pal = pal,
+    values = shared_domain,
+    title = "Percent Cover",
+    opacity = 1
+  )
+
+```
