@@ -29,7 +29,6 @@ website:
           - dashboard/Turbinaria.qmd
           - dashboard/Water_quality_index.qmd
           - dashboard/Benthic_coral_cover.qmd
-          - dashboard/Benthic_algal_cover.qmd
           - dashboard/Bleaching.qmd
           - dashboard/Coral_mortality.qmd
           - dashboard/Temperature.qmd
