@@ -4,6 +4,151 @@ format: html
 ---
 
 ```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 20
+#| fig-height: 10
+#| out-width: "100%"
+#| fig-align: center
+
+library(plotly)
+library(tidyr)
+library(dplyr)
+
+dat <- read.csv("~/Documents/ATI_website/Data/LTER_mean_coral_and_algae_cover_by_year.csv")
+
+cover_all <- dat %>%
+  mutate(
+    Habitat_type = case_when(
+      Habitat == "Forereef" & Depth == 10 ~ "Forereef 10m",
+      Habitat == "Forereef" & Depth == 17 ~ "Forereef 17m",
+      Habitat == "Fringing" ~ "Fringing",
+      Habitat == "Backreef" ~ "Backreef",
+      TRUE ~ NA_character_
+    )
+  ) %>%
+  filter(!is.na(Habitat_type)) %>%
+  pivot_longer(
+    cols = c(Coral_percent_cover, Macroalgae_percent_cover),
+    names_to = "Cover_type",
+    values_to = "Percent_cover"
+  ) %>%
+  mutate(
+    Cover_type = if_else(Cover_type == "Coral_percent_cover", "Coral", "Macroalgae"),
+    Habitat_type = factor(Habitat_type, levels = c("Forereef 10m", "Forereef 17m", "Fringing", "Backreef"))
+  )
 
 
+# Build plotly subplot: one panel per habitat
+habitats <- c("Forereef 10m", "Forereef 17m", "Fringing", "Backreef")
+sites <- sort(unique(cover_all$Site))  # LTER_1, LTER_2, ... for consistent trace order
+n_sites <- length(sites)
+
+# Create one plot per habitat (coral traces first, then algae traces per habitat)
+# Trace order per habitat: coral LTER_1..LTER_6, then algae LTER_1..LTER_6
+plot_list <- lapply(habitats, function(hab) {
+  df_hab <- cover_all %>% filter(Habitat_type == hab) %>%
+    mutate(Site = factor(Site, levels = sites))
+
+  p <- plot_ly() %>%
+    add_trace(
+      data = df_hab %>% filter(Cover_type == "Coral"),
+      x = ~Year, y = ~Percent_cover,
+      color = ~Site, colors = "Set1",
+      type = "scatter", mode = "lines+markers",
+      legendgroup = ~Site, name = ~paste(Site, "(Coral)")
+    ) %>%
+    add_trace(
+      data = df_hab %>% filter(Cover_type == "Macroalgae"),
+      x = ~Year, y = ~Percent_cover,
+      color = ~Site, colors = "Set1",
+      type = "scatter", mode = "lines+markers",
+      line = list(dash = "dash"),
+      legendgroup = ~Site, name = ~paste(Site, "(Macroalgae)"),
+      visible = FALSE  # default to hidden; show via Cover toggle
+    ) %>%
+    layout(
+      xaxis = list(title = ""),
+      yaxis = list(title = "Percent cover"),
+      showlegend = (hab == habitats[1])
+    )
+  p
+})
+
+# Trace order: each habitat has n_sites coral + n_sites algae
+n_traces_per_hab <- n_sites * 2
+n_total <- length(habitats) * n_traces_per_hab
+
+# Cover toggle visibility (all sites)
+coral_visible <- rep(c(rep(TRUE, n_sites), rep(FALSE, n_sites)), length(habitats))
+algae_visible <- rep(c(rep(FALSE, n_sites), rep(TRUE, n_sites)), length(habitats))
+both_visible <- rep(TRUE, n_total)
+
+# Site toggle visibility (both coral and algae for selected site)
+# site_idx: NULL = all sites, 1..n_sites = single site
+site_visible <- function(site_idx) {
+  base <- logical(n_total)
+  for (h in seq_along(habitats)) {
+    offset <- (h - 1) * n_traces_per_hab
+    if (is.null(site_idx)) {
+      base[offset + seq_len(n_traces_per_hab)] <- TRUE
+    } else {
+      base[offset + site_idx] <- TRUE
+      base[offset + n_sites + site_idx] <- TRUE
+    }
+  }
+  base
+}
+
+# Default: all sites, both cover types
+p_interactive <- subplot(
+  plot_list,
+  nrows = 2,
+  margin = 0.06,
+  titleY = TRUE,
+  titleX = TRUE
+) %>%
+  layout(
+    annotations = list(
+      list(x = 0.24, y = 1.06, text = "<b>Forereef 10m</b>", showarrow = FALSE, xref = "paper", yref = "paper", xanchor = "center", font = list(size = 16)),
+      list(x = 0.76, y = 1.06, text = "<b>Forereef 17m</b>", showarrow = FALSE, xref = "paper", yref = "paper", xanchor = "center", font = list(size = 16)),
+      list(x = 0.24, y = 0.48, text = "<b>Fringing</b>", showarrow = FALSE, xref = "paper", yref = "paper", xanchor = "center", font = list(size = 16)),
+      list(x = 0.76, y = 0.48, text = "<b>Backreef</b>", showarrow = FALSE, xref = "paper", yref = "paper", xanchor = "center", font = list(size = 16))
+    ),
+    updatemenus = list(
+      # Cover toggle (left)
+      list(
+        buttons = list(
+          list(method = "restyle", args = list("visible", coral_visible), label = "Coral only"),
+          list(method = "restyle", args = list("visible", algae_visible), label = "Macroalgae only"),
+          list(method = "restyle", args = list("visible", both_visible), label = "Both")
+        ),
+        direction = "down",
+        showactive = TRUE,
+        active = 0,  # default to "Coral only"
+        x = 0.15, xanchor = "left",
+        y = 1.12, yanchor = "top"
+      ),
+      # Site toggle (right) - note: when used, overrides cover selection (plotly limitation)
+      list(
+        buttons = list(
+          list(method = "restyle", args = list("visible", site_visible(NULL)), label = "All sites"),
+          list(method = "restyle", args = list("visible", site_visible(1)), label = "LTER 1"),
+          list(method = "restyle", args = list("visible", site_visible(2)), label = "LTER 2"),
+          list(method = "restyle", args = list("visible", site_visible(3)), label = "LTER 3"),
+          list(method = "restyle", args = list("visible", site_visible(4)), label = "LTER 4"),
+          list(method = "restyle", args = list("visible", site_visible(5)), label = "LTER 5"),
+          list(method = "restyle", args = list("visible", site_visible(6)), label = "LTER 6")
+        ),
+        direction = "down",
+        showactive = TRUE,
+        active = 0,  # default to "All sites"
+        x = 0.85, xanchor = "right",
+        y = 1.12, yanchor = "top"
+      )
+    )
+  )
+
+p_interactive
 ```
