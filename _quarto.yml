@@ -13,6 +13,8 @@ website:
         text: Time series
       - href: Data_repository.qmd
         text: Repository
+      - href: Publications.qmd
+        text: Publications
       - href: Team.qmd
         text: Team
     
