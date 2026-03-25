@@ -1,6 +1,11 @@
 ---
+title: "Around the Island of Moorea: Mapping Ocean Life to Restore Coral Reefs"
 page-layout: full
 toc: false
+format:
+  html:
+    title-prefix: ""
+    title-block: none
 ---
 
 ::: video-hero
@@ -11,16 +16,22 @@ toc: false
 </iframe>
 :::
 
+::: home-hero-heading
+<h1 class="home-hero-title anchored">
+
+Around the Island of Moorea: Mapping Ocean Life to Restore Coral Reefs
+
+</h1>
+:::
+
 ::: panel-tabset
 #### English
 
-Coral reefs are among the most diverse and valuable ecosystems on Earth-but they are rapidly declining due to climate change, pollution, and other human pressures. Protecting and restoring these ecosystems requires better tools to understand where conservation efforts will be most effective.
+Coral reefs are among the most diverse and valuable ecosystems on Earth, but they are rapidly declining due to climate change, pollution, and other human pressures. Protecting and restoring these ecosystems requires better tools to understand where conservation efforts will be most effective.
 
-This project brings together cutting-edge environmental DNA (eDNA) science, long-term ecological data, and local conservation expertise to map reef biodiversity across the island of Moorea, French Polynesia. By analyzing tiny traces of genetic material in seawater, we can detect a wide range of marine life present, providing an unprecedented view of the reef ecosystems around the island of Moorea. We combine these molecular insights with visual surveys, water quality measurements, and temperature data to build detailed, island-wide maps of reef health. Using advanced modeling and machine learning, we aim to identify which areas are best suited for coral restoration, and conversely which areas may be too degraded or stressed for successful intervention.
+This project brings together cutting-edge environmental DNA (eDNA) science, long-term ecological data, and local conservation expertise to map reef biodiversity across the island of Moorea, French Polynesia. By analyzing tiny traces of genetic material in seawater, we can detect a wide range of marine life present, providing an unprecedented view of the reef ecosystems around the island of Moorea. We combine these molecular insights with visual surveys, water quality measurements, and temperature data to build detailed, island-wide maps of reef health. Using advanced modeling and machine learning approaches, we aim to identify which areas are best suited for coral restoration, and conversely which areas may be too degraded or stressed for successful intervention.
 
-Working closely with the organization Coral Gardeners, this project directly supports on-the-ground restoration by helping guide where corals should be planted to maximize survival, biodiversity, and long-term resilience.
-
-Beyond Moorea, this work serves as a blueprint for coral reef conservation worldwide. By integrating science, technology, and community action, we aim to create a scalable, data-driven approach to restoring ocean ecosystems in a changing climate.
+Working closely with the organization Coral Gardeners, this project directly supports on-the-ground restoration by helping guide where corals should be planted to maximize survival and long-term resilience.
 
 #### Français
 
@@ -29,8 +40,6 @@ Les recifs coralliens comptent parmi les ecosystemes les plus diversifies et les
 Ce projet reunit une science de pointe basee sur l'ADN environnemental (eDNA), des donnees ecologiques a long terme et l'expertise locale en conservation pour cartographier la biodiversite des recifs sur l'ensemble de l'ile de Moorea, en Polynesie francaise. En analysant de minuscules traces de materiel genetique dans l'eau de mer, nous pouvons detecter un large eventail de formes de vie marines presentes, offrant un regard sans precedent sur les ecosystemes de recif autour de Moorea. Nous combinons ces informations moleculaires avec des releves visuels, des mesures de qualite de l'eau et des donnees de temperature pour creer des cartes detaillees a l'echelle de l'ile de l'etat de sante des recifs. Grace a une modelisation avancee et a l'apprentissage automatique, nous cherchons a identifier les zones les mieux adaptees a la restauration des coraux, et inversement les zones trop degradees ou trop stressees pour une intervention reussie.
 
 En collaboration etroite avec l'organisation Coral Gardeners, ce projet soutient directement la restauration sur le terrain en aidant a guider ou les coraux doivent etre plantes afin de maximiser la survie, la biodiversite et la resilience a long terme.
-
-Au-dela de Moorea, ce travail sert de modele pour la conservation des recifs coralliens dans le monde entier. En integrant la science, la technologie et l'action communautaire, nous visons a creer une approche evolutive et basee sur les donnees pour restaurer les ecosystemes oceaniques dans un climat en changement.
 
 #### Reo Tahiti
 

@@ -9,6 +9,12 @@ body {
   background-attachment: fixed;
 }
 
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
 /* Dark overlay for better text readability */
 body::before {
   content: "";
@@ -21,13 +27,117 @@ body::before {
   z-index: -1;
 }
 
-/* Ensure content is readable */
+/* Main content card */
 #quarto-content {
   background: rgba(255, 255, 255, 0.95);
   padding: 2em;
   border-radius: 10px;
   margin: 2em auto;
-  max-width: 90%;
+  max-width: min(1200px, 92%);
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Non–full-width pages: comfortable reading column */
+#quarto-content:not(.page-layout-full) main.content {
+  max-width: min(52rem, 100%);
+  margin-inline: auto;
+}
+
+/* Full-width pages (e.g. Time series): let Plotly / htmlwidgets use full content area */
+#quarto-content.page-layout-full main.content {
+  max-width: 100%;
+}
+
+#quarto-content.page-layout-full .html-widget,
+#quarto-content.page-layout-full .plotly,
+#quarto-content.page-layout-full .js-plotly-plot {
+  max-width: 100%;
+}
+
+/* Body text rhythm */
+body:not(.quarto-dashboard) #quarto-document-content p,
+body:not(.quarto-dashboard) #quarto-document-content li {
+  line-height: 1.65;
+}
+
+/* Home: language tabs — readable measure */
+#quarto-document-content .panel-tabset .tab-pane {
+  max-width: 72ch;
+  margin-inline: auto;
+}
+
+/* Home: tab strip */
+#quarto-document-content .panel-tabset .nav-tabs {
+  border-bottom: 1px solid rgba(13, 79, 92, 0.2);
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+#quarto-document-content .panel-tabset .nav-tabs .nav-link {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  color: #444;
+}
+
+#quarto-document-content .panel-tabset .nav-tabs .nav-link:hover {
+  border-color: rgba(13, 79, 92, 0.25);
+  background: rgba(13, 79, 92, 0.06);
+}
+
+#quarto-document-content .panel-tabset .nav-tabs .nav-link.active {
+  color: #fff;
+  background: #0d4f5c;
+  border-color: #0d4f5c;
+}
+
+#quarto-document-content .panel-tabset .tab-content {
+  padding-top: 1.25rem;
+}
+
+/* About / team template */
+.quarto-about {
+  max-width: 65ch;
+  margin-inline: auto;
+}
+
+/* Home: hide Quarto default title block (duplicate of .home-hero-title); full title remains in <title> */
+#quarto-content.page-layout-full #quarto-document-content > header#title-block-header.quarto-title-block {
+  display: none;
+}
+
+/* Home hero: title stack */
+.home-hero-heading {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto 1.75rem;
+  padding: 0 0.5rem;
+}
+
+.home-hero-title {
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.85rem);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+  color: #0d4f5c;
+}
+
+/* Team page: partner logos */
+.team-logos-row {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.team-logos-row img {
+  max-height: 56px;
+  width: auto;
 }
 
 /* Hide dashboard navbar title and author (only on dashboard pages) */
@@ -82,4 +192,3 @@ body::before {
   font-size: 1rem;
   line-height: 1.4;
 }
-

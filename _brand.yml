@@ -1,0 +1,9 @@
+# Ocean / reef-inspired palette for Sandstone + brand theme
+color:
+  palette:
+    ocean-deep: "#0d4f5c"
+    ocean-mid: "#156a75"
+    surface: "#f7fbfc"
+  background: "#ffffff"
+  foreground: "#1a1a1a"
+  primary: "#0d4f5c"

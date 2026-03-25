@@ -28,9 +28,9 @@ about:
 
 ![](images/PIs.jpg)
 
-::: {style="display: flex; gap: 24px; justify-content: center; align-items: center; flex-wrap: nowrap; margin-top: 24px;"}
-<img src="images/msi_white_logo2.png" alt="MSI logo" style="max-height: 56px; width: auto;"/>
-<img src="images/UC_Santa_Barbara_logo.png" alt="UC Santa Barbara logo" style="max-height: 56px; width: auto;"/>
-<img src="images/CG_logo.png" alt="Coral Gardeners logo" style="max-height: 56px; width: auto;"/>
-<img src="images/CM_logo.jpg" alt="Conservation Metrics logo" style="max-height: 56px; width: auto;"/>
+::: {.team-logos-row}
+<img src="images/msi_white_logo2.png" alt="MSI logo"/>
+<img src="images/UC_Santa_Barbara_logo.png" alt="UC Santa Barbara logo"/>
+<img src="images/CG_logo.png" alt="Coral Gardeners logo"/>
+<img src="images/CM_logo.jpg" alt="Conservation Metrics logo"/>
 :::

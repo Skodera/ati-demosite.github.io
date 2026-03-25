@@ -1,5 +1,6 @@
 ---
 title: "Time series"
+page-layout: full
 format: html
 ---
 
