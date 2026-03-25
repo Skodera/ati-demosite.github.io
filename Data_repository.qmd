@@ -1,11 +1,9 @@
 ---
-title: "Data_repository"
+title: "Data repository"
 format:
   html:
     include-after-body: team-links-new-tab.html
 ---
-
-Here I will add a description and the links to the raw data.
 
 -   [Turbinaria data](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcr.1047.1)
 
