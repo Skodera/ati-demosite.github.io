@@ -5,7 +5,7 @@ project:
 website:
   title: "Around the Island of Moorea"
   description: "Environmental DNA and ecological mapping to guide coral reef restoration around Moorea, French Polynesia."
-  favicon: images/CG_logo.png
+  favicon: images/favicon.svg
   navbar:
     left:
       - href: index.qmd
