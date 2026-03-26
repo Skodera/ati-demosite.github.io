@@ -17,11 +17,17 @@ format:
 :::
 
 ::: home-hero-heading
-<h1 class="home-hero-title anchored">
+<h1 class="home-hero-title">
 
-Around the Island of Moorea: Mapping Ocean Life to Restore Coral Reefs
+Around the Island of Moorea
 
 </h1>
+
+<p class="home-hero-subtitle">
+
+Mapping Ocean Life to Restore Coral Reefs
+
+</p>
 :::
 
 ::: panel-tabset

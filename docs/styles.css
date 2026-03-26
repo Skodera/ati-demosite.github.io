@@ -1,4 +1,5 @@
 /* css styles */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:wght@500;600&display=swap");
 
 /* Background image for the entire page */
 body {
@@ -118,11 +119,21 @@ body:not(.quarto-dashboard) #quarto-document-content li {
 }
 
 .home-hero-title {
-  font-size: clamp(1.25rem, 1rem + 1vw, 1.85rem);
+  font-family: "Merriweather", serif;
+  font-size: clamp(1.7rem, 1.2rem + 1.8vw, 2.7rem);
   font-weight: 700;
-  margin: 0;
-  line-height: 1.3;
+  margin: 0 0 0.12rem;
+  line-height: 1.18;
   color: #0d4f5c;
+}
+
+.home-hero-subtitle {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: clamp(1.08rem, 0.95rem + 0.55vw, 1.42rem);
+  margin: 0;
+  font-weight: 600;
+  color: #2d4a50;
+  letter-spacing: 0.01em;
 }
 
 /* Team page: partner logos */
