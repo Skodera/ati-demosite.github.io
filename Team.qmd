@@ -19,6 +19,9 @@ about:
       text: McDevitt-Irwin lab
       href: https://www.jamiemcdevittirwin.com/
     - icon: link
+      text: Christian John
+      href: https://jepsonnomad.github.io/
+    - icon: link
       text: Conservation Metrics
       href: https://conservationmetrics.com/
     - icon: link
@@ -28,9 +31,6 @@ about:
 
 ![](images/PIs.jpg)
 
-::: {.team-logos-row}
-<img src="images/msi_white_logo2.png" alt="MSI logo"/>
-<img src="images/UC_Santa_Barbara_logo.png" alt="UC Santa Barbara logo"/>
-<img src="images/CG_logo.png" alt="Coral Gardeners logo"/>
-<img src="images/CM_logo.jpg" alt="Conservation Metrics logo"/>
+::: team-logos-row
+<img src="images/msi_white_logo2.png" alt="MSI logo"/> <img src="images/UC_Santa_Barbara_logo.png" alt="UC Santa Barbara logo"/> <img src="images/CG_logo.png" alt="Coral Gardeners logo"/> <img src="images/CM_logo.jpg" alt="Conservation Metrics logo"/>
 :::

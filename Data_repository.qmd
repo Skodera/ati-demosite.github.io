@@ -17,7 +17,7 @@ format:
 
 -   [LTER fish visual survey data](https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-mcr.6.64)
 
--   [Temperature data](https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-mcr.6.64)
+-   [Temperature data](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcr.1045.6)
 
 -   [Thermal range data](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcr.1045.6)
 
