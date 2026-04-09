@@ -37,6 +37,7 @@ website:
           - dashboard/Temperature.qmd
           - dashboard/Bacterial_eDNA.qmd
           - dashboard/Fish_eDNA.qmd
+          - dashboard/Acoustic_data.qmd
           - dashboard/Fish_visual_surveys.qmd
           
           

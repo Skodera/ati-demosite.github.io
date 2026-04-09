@@ -1,5 +1,5 @@
 ---
-title: "Coral Bleaching"
+title: "Acoustic data"
 format:
   dashboard:
     orientation: columns
@@ -33,19 +33,19 @@ format:
 
 library(leaflet)
 
-df <- read.csv("~/Documents/ATI_website/Data/masterdf.csv")
+df <- read.csv("~/Documents/ATI_website/Data/CM_acoustic_processed.csv")
 
 df_subset <- data.frame(
   lng  = df$Longitude,
   lat  = df$Latitude,
-  poc  = df$Pocillopora_bleaching,
-  acro = df$Acropora_bleaching,
+  dsf  = df$Damselfish,
+  pfc  = df$Parrotfish_crunch,
   site = df$Site
 )
 
-# Shared domain across BOTH genera
+# Shared domain across BOTH signals
 shared_domain <- range(
-  c(df_subset$poc, df_subset$acro),
+  c(df_subset$dsf, df_subset$pfc),
   na.rm = TRUE
 )
 
@@ -57,45 +57,44 @@ pal <- colorNumeric(
 
 metadata <- paste0(
   "Site ", df_subset$site,
-  "<hr>Pocillopora bleaching: ", round(df_subset$poc, 2), "%",
-  "<hr>Acropora bleaching: ", round(df_subset$acro, 2), "%"
+  "<hr>Damselfish: ", ifelse(is.na(df_subset$dsf), "—", round(df_subset$dsf, 3)),
+  " (mean calls / min)",
+  "<hr>Parrotfish crunch: ", ifelse(is.na(df_subset$pfc), "—", round(df_subset$pfc, 3)),
+  " (mean calls / min)"
 )
 
 leaflet(df_subset) %>%
   addProviderTiles("Esri.WorldImagery") %>%
   setView(lng = -149.84, lat = -17.5392, zoom = 12) %>%
-  
-  # Pocillopora layer
+
   addCircleMarkers(
     lng = ~lng, lat = ~lat,
-    color = ~pal(poc),
+    color = ~pal(dsf),
     radius = 4,
     opacity = 1, fillOpacity = 0.8,
     popup = metadata,
-    group = "Pocillopora"
+    group = "Damselfish"
   ) %>%
-  
-  # Acropora layer
+
   addCircleMarkers(
     lng = ~lng, lat = ~lat,
-    color = ~pal(acro),
+    color = ~pal(pfc),
     radius = 4,
     opacity = 1, fillOpacity = 0.8,
     popup = metadata,
-    group = "Acropora"
+    group = "Parrotfish_crunch"
   ) %>%
-  
+
   addLayersControl(
-    baseGroups = c("Pocillopora", "Acropora"),
+    baseGroups = c("Damselfish", "Parrotfish_crunch"),
     options = layersControlOptions(collapsed = FALSE)
   ) %>%
-  
-  # Single shared legend
+
   addLegend(
     position = "bottomright",
     pal = pal,
     values = shared_domain,
-    title = "Bleaching (%)",
+    title = "Mean calls / min",
     opacity = 1
   )
 

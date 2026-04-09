@@ -17,4 +17,5 @@ format:
 - [Temperature](Temperature.html)
 - [Bacterial eDNA](Bacterial_eDNA.html)
 - [Fish eDNA](Fish_eDNA.html)
+- [Acoustic data](Acoustic_data.html)
 - [Fish visual surveys](Fish_visual_surveys.html)
