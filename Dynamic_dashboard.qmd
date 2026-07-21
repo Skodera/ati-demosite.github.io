@@ -1,0 +1,56 @@
+---
+title: "Dynamic dashboard"
+format:
+  html:
+    include-after-body: team-links-new-tab.html
+---
+
+```{r}
+#| echo: false
+# After deploying shiny_dashboard/ to shinyapps.io, set this to your live URL.
+shiny_url <- "https://shokodera.shinyapps.io/ati-data-dashboard/"
+deployed <- !grepl("YOUR_ACCOUNT", shiny_url, fixed = TRUE)
+```
+
+Explore ATI survey sites interactively: pick a metric, filter by habitat and shore, inspect the map and summary chart, then download the filtered table.
+
+```{r}
+#| echo: false
+#| results: asis
+if (deployed) {
+  cat(sprintf(
+    paste0(
+      '<p><a class="btn btn-primary btn-lg" href="%s" target="_blank" rel="noopener">',
+      "Open dynamic dashboard</a></p>\n",
+      '<div class="ratio ratio-16x9 border rounded overflow-hidden mb-3">',
+      '<iframe src="%s" title="ATI Dynamic Dashboard" ',
+      'loading="lazy" style="border:0;width:100%%;height:100%%;min-height:720px;"></iframe>',
+      "</div>\n",
+      '<p class="text-muted small">If the embed is blank, ',
+      '<a href="%s" target="_blank" rel="noopener">open the app in a new tab</a>.</p>\n'
+    ),
+    shiny_url, shiny_url, shiny_url
+  ))
+} else {
+  cat(paste0(
+    '<div class="callout callout-warning">\n',
+    "<div class=\"callout-header\">Deploy required</div>\n",
+    "<div class=\"callout-body\">\n",
+    "<p>The Shiny app lives in <code>shiny_dashboard/</code> at the repo root. ",
+    "Deploy it to shinyapps.io, then replace <code>YOUR_ACCOUNT</code> in ",
+    "<code>Dynamic_dashboard.qmd</code> with your account name and re-render this site.</p>\n",
+    "<p>Local preview:</p>\n",
+    "<pre><code>shiny::runApp(\"shiny_dashboard\")</code></pre>\n",
+    "<p>Full steps: <code>shiny_dashboard/README.md</code>.</p>\n",
+    "</div></div>\n"
+  ))
+}
+```
+
+## What you can do
+
+-   Switch among habitat, distance, Turbinaria %N, bleaching, mortality, benthic cover, eDNA richness, temperature, and acoustic metrics
+-   Filter master ATI sites by habitat, island shore, and distance from shore
+-   Click markers for site details; download the filtered CSV
+
+Temperature and acoustic layers use their own monitoring networks (different site IDs), so habitat/shore/distance filters apply to the ATI master sites only.

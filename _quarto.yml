@@ -10,6 +10,8 @@ website:
       - href: index.qmd
         text: Home
       - sidebar:dashboard
+      - href: Dynamic_dashboard.qmd
+        text: Dynamic dashboard
       - href: Time_series.qmd
         text: Time series
       - href: https://moorea-surveys.community.guardianconnector.net/

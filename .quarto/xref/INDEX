@@ -73,5 +73,8 @@
   },
   "dashboard/Acoustic_data.qmd": {
     "Acoustic_data.html": "9d3105cd"
+  },
+  "Dynamic_dashboard.qmd": {
+    "Dynamic_dashboard.html": "a2a0d6e3"
   }
 }
