@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "Dynamic_dashboard.html",
-    "href": "Dynamic_dashboard.html",
-    "title": "Dynamic dashboard",
-    "section": "",
-    "text": "Explore ATI survey sites interactively: pick a metric, filter by habitat and shore, inspect the map and summary chart, then download the filtered table.\nOpen dynamic dashboard\nIf the embed is blank, open the app in a new tab."
-  },
-  {
-    "objectID": "Dynamic_dashboard.html#what-you-can-do",
-    "href": "Dynamic_dashboard.html#what-you-can-do",
-    "title": "Dynamic dashboard",
-    "section": "What you can do",
-    "text": "What you can do\n\nSwitch among habitat, distance, Turbinaria %N, bleaching, mortality, benthic cover, eDNA richness, temperature, and acoustic metrics\nFilter master ATI sites by habitat, island shore, and distance from shore\nClick markers for site details; download the filtered CSV\n\nTemperature and acoustic layers use their own monitoring networks (different site IDs), so habitat/shore/distance filters apply to the ATI master sites only."
-  },
-  {
     "objectID": "Data_repository.html",
     "href": "Data_repository.html",
     "title": "Data repository",
