@@ -214,21 +214,29 @@ body.dynamic-dashboard-page::before {
   display: none;
 }
 
+/* Quarto .page-columns uses a CSS grid with 5fr side gutters; collapse it here. */
+body.dynamic-dashboard-page #quarto-content.page-columns,
 body.dynamic-dashboard-page #quarto-content {
-  max-width: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  display: block !important;
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
   border-radius: 0;
   box-shadow: none;
   border: none;
   background: #fff;
 }
 
-body.dynamic-dashboard-page #quarto-content.page-layout-full main.content {
-  max-width: 100%;
-  padding: 0;
-  margin: 0;
+body.dynamic-dashboard-page #quarto-content.page-layout-full main.content,
+body.dynamic-dashboard-page main.content.column-page,
+body.dynamic-dashboard-page #quarto-document-content {
+  display: block !important;
+  grid-column: unset !important;
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 body.dynamic-dashboard-page #quarto-document-content > header#title-block-header,
