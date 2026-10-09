@@ -33,14 +33,13 @@ body::before {
   background: rgba(255, 255, 255, 0.95);
   padding: 2em;
   border-radius: 10px;
-  margin: 2em auto;
-  max-width: min(1200px, 92%);
+  margin: 2em auto 5em;
+  max-width: min(1600px, 96%);
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
-
 /* Non–full-width pages: comfortable reading column */
 #quarto-content:not(.page-layout-full) main.content {
   max-width: min(52rem, 100%);
