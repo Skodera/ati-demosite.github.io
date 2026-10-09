@@ -9,7 +9,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - sidebar:dashboard
       - href: Dynamic_dashboard.qmd
         text: Dynamic dashboard
       - href: Time_series.qmd
@@ -23,30 +22,6 @@ website:
         text: Publications
       - href: Team.qmd
         text: Team
-    
-  sidebar:
-    - id: dashboard
-      title: "Data Dashboard"
-      style: "docked"
-      background: light
-      collapse-level: 2
-      width: 200  # Add this to make sidebar narrower
-      contents:
-          - dashboard/Habitat_type.qmd
-          - dashboard/Distance_from_shore.qmd
-          - dashboard/Turbinaria.qmd
-          - dashboard/Water_quality_index.qmd
-          - dashboard/Benthic_coral_cover.qmd
-          - dashboard/Bleaching.qmd
-          - dashboard/Coral_mortality.qmd
-          - dashboard/Temperature.qmd
-          - dashboard/Bacterial_eDNA.qmd
-          - dashboard/Fish_eDNA.qmd
-          - dashboard/Acoustic_data.qmd
-          - dashboard/Fish_visual_surveys.qmd
-          
-          
-      
 
 format:
   html:
