@@ -13,6 +13,8 @@ website:
         text: Dynamic dashboard
       - href: Time_series.qmd
         text: Time series
+      - href: Time_series_2.qmd
+        text: Time series 2
       - href: https://moorea-surveys.community.guardianconnector.net/
         text: Acoustic Dashboard
         target: "_blank"

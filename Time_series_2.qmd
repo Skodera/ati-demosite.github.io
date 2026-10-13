@@ -1,0 +1,42 @@
+---
+title: "Time series 2"
+page-layout: full
+toc: false
+format:
+  html:
+    title-block-style: none
+    include-after-body: team-links-new-tab.html
+    body-classes: "dynamic-dashboard-page"
+---
+
+```{r}
+#| echo: false
+shiny_url <- "https://shokodera.shinyapps.io/ati-lter-timeseries/"
+deployed <- !grepl("YOUR_ACCOUNT", shiny_url, fixed = TRUE)
+```
+
+```{r}
+#| echo: false
+#| results: asis
+if (deployed) {
+  cat(sprintf(
+    paste0(
+      '<div class="shiny-fullpage" id="shiny-fullpage">',
+      '<iframe src="%s" title="ATI LTER time series" ',
+      'loading="eager" allow="fullscreen" ',
+      'referrerpolicy="no-referrer-when-downgrade"></iframe>',
+      "</div>\n"
+    ),
+    shiny_url
+  ))
+} else {
+  cat(paste0(
+    '<div class="callout callout-warning">\n',
+    "<div class=\"callout-header\">Deploy required</div>\n",
+    "<div class=\"callout-body\">\n",
+    "<p>Deploy <code>shiny_timeseries/</code> to shinyapps.io, set ",
+    "<code>shiny_url</code> in this file, then re-render the site.</p>\n",
+    "</div></div>\n"
+  ))
+}
+```
