@@ -1,5 +1,5 @@
 ---
-title: "Dynamic dashboard"
+title: "ATI Dashboard"
 page-layout: full
 toc: false
 format:

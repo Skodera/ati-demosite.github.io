@@ -10,9 +10,9 @@ website:
       - href: index.qmd
         text: Home
       - href: Dynamic_dashboard.qmd
-        text: Dynamic dashboard
+        text: ATI Dashboard
       - href: Time_series.qmd
-        text: Time series
+        text: LTER Time Series
       - href: https://moorea-surveys.community.guardianconnector.net/
         text: Acoustic Dashboard
         target: "_blank"

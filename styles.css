@@ -46,6 +46,13 @@ body::before {
   margin-inline: auto;
 }
 
+@media (max-width: 768px) {
+  #quarto-content {
+    padding: 1em;
+    margin: 0.75em auto 2em;
+  }
+}
+
 /* Full-width pages (e.g. Time series): let Plotly / htmlwidgets use full content area */
 #quarto-content.page-layout-full main.content {
   max-width: 100%;

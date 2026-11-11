@@ -1,5 +1,5 @@
 ---
-title: "Time series"
+title: "LTER Time Series"
 page-layout: full
 toc: false
 format:
