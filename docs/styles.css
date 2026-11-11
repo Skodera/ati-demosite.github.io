@@ -183,6 +183,37 @@ body:not(.quarto-dashboard) #quarto-document-content li {
   border: none;
 }
 
+@media (max-width: 768px) {
+  .video-hero {
+    /* Card padding is 1em, and the page grid adds a 1.5em side track. */
+    width: calc(100% + 5em);
+    max-width: none;
+    margin-left: -2.5em;
+    margin-right: -2.5em;
+    padding-bottom: 0;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  #quarto-document-content .panel-tabset .nav-tabs {
+    flex-wrap: nowrap;
+    gap: 0.35rem;
+  }
+
+  #quarto-document-content .panel-tabset .nav-tabs .nav-item {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  #quarto-document-content .panel-tabset .nav-tabs .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 0.4rem 0.35rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+}
+
 .video-overlay {
   position: absolute;
   inset: 0;
