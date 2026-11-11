@@ -53,20 +53,14 @@ body::before {
   }
 }
 
-/* Full-width pages (e.g. Time series): let Plotly / htmlwidgets use full content area */
+/* Full-width pages: use the content card width */
 #quarto-content.page-layout-full main.content {
   max-width: 100%;
 }
 
-#quarto-content.page-layout-full .html-widget,
-#quarto-content.page-layout-full .plotly,
-#quarto-content.page-layout-full .js-plotly-plot {
-  max-width: 100%;
-}
-
 /* Body text rhythm */
-body:not(.quarto-dashboard) #quarto-document-content p,
-body:not(.quarto-dashboard) #quarto-document-content li {
+#quarto-document-content p,
+#quarto-document-content li {
   line-height: 1.65;
 }
 
@@ -103,12 +97,6 @@ body:not(.quarto-dashboard) #quarto-document-content li {
 
 #quarto-document-content .panel-tabset .tab-content {
   padding-top: 1.25rem;
-}
-
-/* About / team template */
-.quarto-about {
-  max-width: 65ch;
-  margin-inline: auto;
 }
 
 /* Home: hide Quarto default title block (duplicate of .home-hero-title); full title remains in <title> */
@@ -155,13 +143,6 @@ body:not(.quarto-dashboard) #quarto-document-content li {
 .team-logos-row img {
   max-height: 56px;
   width: auto;
-}
-
-/* Hide dashboard navbar title and author (only on dashboard pages) */
-.quarto-dashboard .navbar-title,
-.quarto-dashboard .navbar-author,
-.quarto-dashboard .navbar-title-text {
-  display: none !important;
 }
 
 /* Video hero (index.qmd) */
@@ -212,33 +193,6 @@ body:not(.quarto-dashboard) #quarto-document-content li {
     font-size: 0.82rem;
     white-space: nowrap;
   }
-}
-
-.video-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.25);
-  color: #fff;
-}
-
-.video-overlay h1 {
-  margin: 0;
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
-  font-weight: 700;
-}
-
-.video-overlay p {
-  margin: 0.5rem 0 0;
-  max-width: 900px;
-  opacity: 0.95;
-  font-size: 1rem;
-  line-height: 1.4;
 }
 
 /* Dynamic dashboard: full-viewport Shiny embed under site navbar */
